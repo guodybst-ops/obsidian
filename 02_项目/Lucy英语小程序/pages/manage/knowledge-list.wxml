@@ -1,0 +1,16 @@
+<view class="page-shell" style="min-height:100vh;background:#f6eef0;padding-bottom:40rpx;">
+  <view style="display:flex;align-items:center;padding:0 24rpx;padding-top:env(safe-area-inset-top);height:88rpx;background:#202020;">
+    <view style="width:64rpx;height:88rpx;display:flex;align-items:center;justify-content:center;" bindtap="goBack">
+      <view style="width:20rpx;height:20rpx;border-left:4rpx solid #fff;border-bottom:4rpx solid #fff;transform:rotate(45deg);"></view>
+    </view>
+    <view style="flex:1;text-align:center;color:#fff;font-size:30rpx;font-weight:900;">全部知识点</view>
+    <view style="width:64rpx;"></view>
+  </view>
+
+  <view style="padding:24rpx;">
+    <block wx:for="{{Object.keys(grouped)}}" wx:key="*this">
+      <view style="margin-top:10rpx;padding:8rpx 16rpx;color:#ff86a0;font-size:32rpx;font-weight:900;">{{item}}</view>
+      <view wx:for="{{grouped[item]}}" wx:key="*this" wx:for-item="word" class="know-list-item">{{word}}</view>
+    </block>
+  </view>
+</view>

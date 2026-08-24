@@ -1,0 +1,112 @@
+{
+  "userName": "",
+  "permissionMode": "yolo",
+  "model": "gpt-5.5",
+  "thinkingBudget": "off",
+  "effortLevel": "high",
+  "serviceTier": "default",
+  "enableAutoTitleGeneration": true,
+  "titleGenerationModel": "",
+  "excludedTags": [],
+  "mediaFolder": "99_Attachments",
+  "systemPrompt": "你正在协助维护一个 Obsidian 自动知识库。进入本 Vault 后，优先阅读根目录 AGENTS.md 和 CLAUDE.md，再按 06_Skills/入库规则 中的规则处理资料。用户不是技术背景，先用产品经理视角理解真实目标，再落成目录、模板、提示词、规则和可执行清单。不要在未确认的情况下删除或批量移动已有资料。",
+  "persistentExternalContextPaths": [
+    "C:\\Users\\89836\\Documents\\Obsidian Vault\\AGENTS.md",
+    "C:\\Users\\89836\\Documents\\Obsidian Vault\\CLAUDE.md",
+    "C:\\Users\\89836\\Documents\\Obsidian Vault\\06_Skills\\入库规则\\研究领域与输出目标.md",
+    "C:\\Users\\89836\\Documents\\Obsidian Vault\\06_Skills\\入库规则\\自动知识库入库规则.md"
+  ],
+  "sharedEnvironmentVariables": "",
+  "envSnippets": [],
+  "customContextLimits": {},
+  "customModelAliases": {},
+  "keyboardNavigation": {
+    "scrollUpKey": "w",
+    "scrollDownKey": "s",
+    "focusInputKey": "i"
+  },
+  "requireCommandOrControlEnterToSend": false,
+  "locale": "zh-CN",
+  "providerConfigs": {
+    "claude": {
+      "safeMode": "acceptEdits",
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "loadUserSettings": true,
+      "enableChrome": false,
+      "enableBangBash": false,
+      "enableOpus1M": false,
+      "enableSonnet1M": false,
+      "customModels": "",
+      "lastModel": "haiku",
+      "environmentVariables": "",
+      "environmentHash": ""
+    },
+    "codex": {
+      "enabled": true,
+      "safeMode": "workspace-write",
+      "cliPath": "C:\\Users\\89836\\AppData\\Roaming\\npm\\codex.cmd",
+      "cliPathsByHost": {
+        "device:5ae9a6d6-8076-4f61-a52d-fb9240db7931": "C:\\Users\\89836\\AppData\\Roaming\\npm\\codex.cmd"
+      },
+      "customModels": "chatgpt-5.5",
+      "reasoningSummary": "detailed",
+      "environmentVariables": "",
+      "environmentHash": "",
+      "installationMethodsByHost": {
+        "device:51036db4-8741-42d4-a916-795faf97f32c": "native-windows",
+        "device:5ae9a6d6-8076-4f61-a52d-fb9240db7931": "native-windows"
+      },
+      "wslDistroOverridesByHost": {}
+    },
+    "opencode": {
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "enabled": false,
+      "environmentHash": "",
+      "environmentVariables": "OPENCODE_ENABLE_EXA=1",
+      "modelAliases": {},
+      "preferredThinkingByModel": {},
+      "selectedMode": "",
+      "thinkingOptionsByModel": {},
+      "visibleModels": []
+    },
+    "pi": {
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "discoveredModels": [],
+      "enabled": false,
+      "environmentHash": "",
+      "environmentVariables": "",
+      "modelAliases": {},
+      "preferredThinkingByModel": {},
+      "toolMode": "all",
+      "visibleModels": []
+    }
+  },
+  "settingsProvider": "codex",
+  "savedProviderModel": {
+    "claude": "haiku",
+    "codex": "gpt-5.5"
+  },
+  "savedProviderEffort": {
+    "claude": "high",
+    "codex": "high"
+  },
+  "savedProviderServiceTier": {
+    "codex": "default"
+  },
+  "savedProviderThinkingBudget": {},
+  "savedProviderPermissionMode": {
+    "claude": "yolo",
+    "codex": "yolo"
+  },
+  "lastCustomModel": "",
+  "maxTabs": 3,
+  "enableAutoScroll": true,
+  "deferMathRenderingDuringStreaming": true,
+  "expandFileEditsByDefault": false,
+  "chatViewPlacement": "right-sidebar",
+  "hiddenProviderCommands": {},
+  "tabBarPosition": "input"
+}

@@ -1,0 +1,145 @@
+<view class="page-shell knowledge-page">
+  <block wx:if="{{!selectedLessonId}}">
+    <view class="knowledge-fixed-header" catchtouchmove="noop">
+      <view class="top-bar" style="padding-top: {{navMetrics.top}}px; height: {{navMetrics.height}}px;">
+        <view class="top-bar-title">Lucy的雷霆英语王国</view>
+      </view>
+
+      <view class="search-row">
+        <picker mode="selector" range="{{levels}}" value="{{levelIndex}}" bindchange="handleLevelChange">
+          <view class="level-pill">{{levels[levelIndex]}} <text class="chevron">▾</text></view>
+        </picker>
+        <view class="search-box">
+          <input value="{{keyword}}" placeholder="搜索课文名、单词、知识点" bindinput="handleSearch" />
+          <text wx:if="{{keyword}}" class="clear" bindtap="clearSearch">×</text>
+        </view>
+      </view>
+    </view>
+    <view style="height: {{headerBottomPx}}px;"></view>
+  </block>
+
+  <view wx:if="{{selectedLessonId}}" class="detail-hero" style="padding-top: 0;">
+    <view class="detail-nav" style="height: {{navMetrics.heroHeight}}px;">
+      <button class="back-button" style="top: {{navMetrics.center}}px; left: {{navMetrics.backLeft}}rpx;" bindtap="backToLessons" aria-label="返回课文列表">
+        <view class="back-icon"></view>
+      </button>
+      <block wx:for="{{filteredLessons}}" wx:key="id">
+        <view wx:if="{{item.id === selectedLessonId}}" class="detail-title-wrap" style="top: {{navMetrics.center}}px;">
+          <view class="detail-lesson-title">{{item.title}}</view>
+          <view class="detail-lesson-level">{{item.level}}</view>
+        </view>
+      </block>
+      <view class="nav-spacer"></view>
+    </view>
+  </view>
+
+  <view
+    wx:if="{{!selectedLessonId}}"
+    class="lesson-browser"
+  >
+    <scroll-view
+      class="browser-scroll"
+      scroll-y
+      enhanced
+      show-scrollbar="{{false}}"
+      bounces="{{false}}"
+      bindscroll="handleBrowserScroll"
+      style="height: 100%;"
+    >
+      <view class="scroll-inner">
+        <view class="photo-wall" style="opacity: {{photoWallOpacity}}">
+          <image wx:if="{{photoWallImage}}" class="photo-wall-image" src="{{photoWallImage}}" mode="aspectFill"></image>
+          <view wx:else class="photo-wall-placeholder">照片墙</view>
+          <button class="change-photo-button" catchtap="choosePhoto">更换图片</button>
+        </view>
+
+        <view class="lesson-grid-wrap">
+          <view class="gallery-grid">
+            <block wx:for="{{filteredLessons}}" wx:key="id">
+              <view
+                class="photo-card {{selectedLessonId === item.id ? 'selected' : ''}}"
+                data-id="{{item.id}}"
+                catchtap="selectLesson"
+              >
+                <text class="lesson-card-title">{{item.title}}</text>
+              </view>
+            </block>
+            <view wx:if="{{isTeacher}}" class="add-lesson-card" catchtap="addNewLesson">
+              <text class="add-lesson-icon">+</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view wx:if="{{selectedLessonId}}" class="add-point-wrap">
+    <button class="add-point-button" bindtap="openTeacherPanel">+ 新增知识点</button>
+  </view>
+
+  <view wx:if="{{selectedLessonId && filteredLessons.length}}" class="lesson-stack">
+    <view
+      wx:for="{{filteredLessons}}"
+      wx:key="id"
+      wx:if="{{item.id === selectedLessonId}}"
+      class="lesson-card"
+    >
+      <view class="point-list">
+        <view
+          wx:for="{{item.points}}"
+          wx:key="id"
+          class="point-item {{openPointId === item.id ? 'open' : ''}}"
+          data-id="{{item.id}}"
+          data-text="{{item.text}}"
+          bindtap="togglePoint"
+        >
+          <view class="point-main">
+            <view class="point-label">{{item.type}}</view>
+            <view class="point-text">{{item.text}}</view>
+            <view class="play-button {{playingPointId === item.id ? 'playing' : ''}}" catchtap="playPoint" data-id="{{item.id}}" data-text="{{item.text}}" data-speak-text="{{item.phraseAudio || item.text}}" data-audio="{{item.audio || ''}}" role="button" aria-label="播放发音">
+              <view class="play-triangle"></view>
+            </view>
+          </view>
+          <view wx:if="{{openPointId === item.id}}" class="point-detail">
+            <view class="detail-row"><text>音标：</text><text>{{item.phonetic}}</text></view>
+            <view class="detail-row"><text>释义：</text><text>{{item.chinese}}</text></view>
+            <view class="detail-row sentence-row"><text>原文句子：</text><text>{{item.sentence}}</text></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{showAddLessonPanel}}" class="modal-mask" catchtap="closeAddLessonPanel">
+    <view class="lesson-panel" catchtap="noop">
+      <view class="panel-title">录入新课文</view>
+      <textarea class="panel-textarea lesson-name-input" value="{{newLessonTitle}}" placeholder="课文" bindinput="updateNewLessonTitle" />
+      <textarea class="panel-textarea lesson-points-input" value="{{newLessonPoints}}" placeholder="知识点" bindinput="updateNewLessonPoints" />
+      <view class="panel-actions">
+        <button class="ghost" bindtap="closeAddLessonPanel">取消</button>
+        <button class="primary" bindtap="submitNewLesson">保存</button>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{showTeacherPanel}}" class="modal-mask" catchtap="closeTeacherPanel">
+    <view class="teacher-panel" catchtap="noop">
+      <view class="panel-title">录入课后知识点</view>
+      <input class="panel-input" value="{{form.title}}" placeholder="课文名或复习标题" bindinput="updateFormTitle" />
+      <textarea class="panel-textarea" value="{{form.raw}}" placeholder="输入单词或词组，可用换行或逗号分隔" bindinput="updateFormRaw" />
+      <view class="panel-actions">
+        <button class="ghost" bindtap="closeTeacherPanel">取消</button>
+        <button class="primary" bindtap="generateKnowledge">生成</button>
+      </view>
+      <view wx:if="{{generatedPreview}}" class="preview-box">
+        <view class="preview-title">{{generatedPreview.title}}</view>
+        <view wx:for="{{generatedPreview.points}}" wx:key="id" class="preview-item">
+          {{item.type}} · {{item.text}} · {{item.sentence}}
+        </view>
+        <button class="use-button" bindtap="useGenerated">加入首页</button>
+      </view>
+    </view>
+  </view>
+
+  <bottom-nav wx:if="{{!selectedLessonId}}" active="knowledge" />
+</view>

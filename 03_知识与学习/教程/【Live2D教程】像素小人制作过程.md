@@ -1,0 +1,1 @@
+【【Live2D教程】直播原速！超简单像素小人制作过程！包教包会！】 https://www.bilibili.com/video/BV1Mx42117Rq/?share_source=copy_web&vd_source=830153cafdc68b9c43f41de1df9c56a9

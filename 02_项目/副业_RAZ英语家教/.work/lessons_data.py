@@ -1,0 +1,150 @@
+
+# =====================================================================
+# 2. BIGGER THAN A MONSTER TRUCK (272 words) - 比怪兽卡车还大的车
+# =====================================================================
+LESSONS.append({
+    "title_en": "Bigger Than a Monster Truck",
+    "word_count": 272,
+    "topic": "巨型工程与运输车辆（卡车、挖土机、太空车）",
+    "objectives": {
+        "knowledge": [
+            "掌握vehicle, bucket, platform, mines等运输/工程类生词",
+            "理解倍数表达twice as tall as, as long as的用法",
+            "学习最高级 the largest / the biggest 在比较中的运用",
+        ],
+        "process": [
+            "通过对比怪兽卡车与文中更大车辆，激发探究兴趣",
+            "运用信息匹配任务训练scanning能力",
+            "小组合作完成'交通工具名片'任务，训练归纳整理能力",
+        ],
+        "emotions": [
+            "感受人类制造巨型机械的创造力",
+            "培养对工程科技与未知领域的好奇心",
+        ],
+    },
+    "key_points": [
+        "巨型交通工具词汇 (vehicle bridge, dump truck, overland train, shovel, tunnel digger)",
+        "形容词最高级与倍数表达",
+        "一般现在时描述事物特征",
+    ],
+    "difficult_points": [
+        "倍数表达 twice as ... as ... 与三倍以上倍数的使用",
+        "专有名词Helepolis等历史背景知识的补充",
+    ],
+    "methods": ["图片预测法", "比较阅读", "任务驱动教学"],
+    "preparation": ["PPT（含车辆图片）", "生词卡", "作业单"],
+    "process": [
+        {"name": "Lead-in（导入）", "duration": "4分钟",
+         "teacher": "播放怪兽卡车视频片段，提问：What's even bigger than a monster truck?",
+         "students": "观看视频，自由联想并回答。",
+         "purpose": "激发兴趣，引入主题。"},
+        {"name": "Pre-reading（读前）", "duration": "5分钟",
+         "teacher": "出示各车辆图片（鸭式两栖车、车辆桥、起重机、自卸车、陆地列车、太空车），带读生词。",
+         "students": "看图认物，跟读生词卡。",
+         "purpose": "扫除生词障碍，建立图像与词汇的联结。"},
+        {"name": "While-reading（读中）", "duration": "15分钟",
+         "teacher": "1. Skim：找出文中介绍了几种'比怪兽卡车更大'的车辆；2. Scan：完成匹配表（车辆-功能）；3. 重点讲解twice as tall as a person等比较句型。",
+         "students": "速读抓主旨；细读做匹配；小组讨论比较句型。",
+         "purpose": "训练阅读策略，落实语言点。"},
+        {"name": "Post-reading（读后）", "duration": "8分钟",
+         "teacher": "1. 复述：If you were an engineer, which vehicle would you build? Why? 2. 拓展：介绍世界上最大的车辆Bagger 288。",
+         "students": "小组讨论并汇报。",
+         "purpose": "内化语言，培养表达和思辨能力。"},
+        {"name": "Summary & Homework（小结与作业）", "duration": "3分钟",
+         "teacher": "总结重点词汇和比较句型，布置分层作业。",
+         "students": "记录作业。",
+         "purpose": "巩固提升，分层练习。"},
+    ],
+    "blackboard": (
+        "Bigger Than a Monster Truck\n"
+        "Duck / Vehicle Bridge / Crane / Dump Truck\n"
+        "Overland Train / Power Shovel / Tunnel Digger / Bagger 288\n"
+        "★ as ... as ...   ★ twice as tall as a person\n"
+        "★ the largest / the biggest"
+    ),
+    "homework": [
+        "必做：抄写本课生词并选其中5个造句（用twice as ... as 或最高级）。",
+        "选做：制作一张你最喜欢的巨型车辆名片（功能、特点、对比）。",
+        "拓展：观看纪录片《MegaStructures》片段，记录3个关于巨型机械的英文词汇。",
+    ],
+    "vocabulary": [
+        {"word": "vehicle", "ipa": "/ˈviːəkl/", "pos": "n.", "meaning_zh": "车辆，运载工具",
+         "meaning_en": "a thing used for transporting people or goods on land"},
+        {"word": "crush", "ipa": "/krʌʃ/", "pos": "v.", "meaning_zh": "压碎，碾过",
+         "meaning_en": "to press something so hard that it breaks or is damaged"},
+        {"word": "duck", "ipa": "/dʌk/", "pos": "n.", "meaning_zh": "两栖登陆车；鸭子",
+         "meaning_en": "a vehicle that can travel on both land and water"},
+        {"word": "bridge", "ipa": "/brɪdʒ/", "pos": "n.", "meaning_zh": "桥梁",
+         "meaning_en": "a structure built over a river, road, etc. so people can cross"},
+        {"word": "crane", "ipa": "/kreɪn/", "pos": "n.", "meaning_zh": "起重机",
+         "meaning_en": "a large machine with a long arm used for lifting heavy things"},
+        {"word": "dump truck", "ipa": "/dʌmp trʌk/", "pos": "n.", "meaning_zh": "自卸卡车，翻斗车",
+         "meaning_en": "a truck that can tip up to empty its load"},
+        {"word": "mines", "ipa": "/maɪnz/", "pos": "n.", "meaning_zh": "矿井，矿区",
+         "meaning_en": "places where minerals are taken from the ground by digging"},
+        {"word": "tire", "ipa": "/ˈtaɪər/", "pos": "n.", "meaning_zh": "轮胎",
+         "meaning_en": "a thick rubber ring that fits around the wheel of a vehicle"},
+        {"word": "platform", "ipa": "/ˈplætfɔːrm/", "pos": "n.", "meaning_zh": "平台",
+         "meaning_en": "a flat raised surface higher than the area around it"},
+        {"word": "shovel", "ipa": "/ˈʃʌvəl/", "pos": "n.", "meaning_zh": "铁铲；挖掘机铲斗",
+         "meaning_en": "a tool or machine part used for digging and moving earth"},
+        {"word": "bucket", "ipa": "/ˈbʌkɪt/", "pos": "n.", "meaning_zh": "（挖掘机的）铲斗",
+         "meaning_en": "a large container attached to a machine for moving earth or rocks"},
+        {"word": "scoop", "ipa": "/skuːp/", "pos": "v.", "meaning_zh": "舀，铲起",
+         "meaning_en": "to pick up something by using a scoop or your hand"},
+        {"word": "tunnel", "ipa": "/ˈtʌnəl/", "pos": "n.", "meaning_zh": "隧道，地道",
+         "meaning_en": "a long passage under the ground or through a mountain"},
+        {"word": "gigantic", "ipa": "/dʒaɪˈɡæntɪk/", "pos": "adj.", "meaning_zh": "巨大的，庞大的",
+         "meaning_en": "extremely large in size or amount"},
+        {"word": "ancient", "ipa": "/ˈeɪnʃənt/", "pos": "adj.", "meaning_zh": "古代的，古老的",
+         "meaning_en": "belonging to a time long ago in history"},
+        {"word": "load", "ipa": "/loʊd/", "pos": "n.", "meaning_zh": "负载；货物",
+         "meaning_en": "something that is being carried by a vehicle or person"},
+    ],
+    "phrases": [
+        {"phrase": "travel on", "meaning_zh": "在…上行驶",
+         "usage": "后接交通工具或地点介词",
+         "example": "On land, the Duck moves around on six wheels."},
+        {"phrase": "fold up", "meaning_zh": "折叠收起",
+         "usage": "动词短语，强调可折叠的特性",
+         "example": "When the bridge is no longer needed, it folds up onto the vehicle."},
+        {"phrase": "twice as tall as", "meaning_zh": "两倍高",
+         "usage": "倍数表达，as ... as 中间放原级",
+         "example": "Their tires are twice as tall as a person."},
+        {"phrase": "as long as", "meaning_zh": "长达…；只要",
+         "usage": "表长度时后接具体长度",
+         "example": "The Bagger 288 is almost as long as two football fields."},
+        {"phrase": "in search of", "meaning_zh": "寻找",
+         "usage": "介词短语，书面语常用",
+         "example": "It digs mines."},
+        {"phrase": "hard to reach", "meaning_zh": "难以到达的",
+         "usage": "形容词短语作后置定语",
+         "example": "It is used to carry things into hard-to-reach places."},
+    ],
+    "grammar": [
+        {
+            "point": "形容词最高级（Superlative）",
+            "explanation": "结构：the + 最高级 (+ of/in + 比较范围)。三音节及以上形容词前加 most；三音节以下加 -est。",
+            "examples": [
+                "The world's biggest dump trucks are used at mines.",
+                "The Bagger 288 is the largest vehicle in the world.",
+            ],
+        },
+        {
+            "point": "倍数表达 twice / three times as ... as ...",
+            "explanation": "倍数 + as + adj./adv. + as 表示倍数关系，是常见比较结构。",
+            "examples": [
+                "Their tires are twice as tall as a person.",
+                "Each wheel is taller than a person.",
+            ],
+        },
+        {
+            "point": "复合形容词 hard-to-reach / easy-to-use",
+            "explanation": "副词 + to + 动词原形构成复合形容词，中间用连字符，常作定语。",
+            "examples": [
+                "It is used to carry things into hard-to-reach places.",
+                "A D-9 is a push-dozer used to dig up tough ground.",
+            ],
+        },
+    ],
+})

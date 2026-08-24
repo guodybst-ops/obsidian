@@ -1,0 +1,32 @@
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  height: calc(80rpx + env(safe-area-inset-bottom));
+  padding: 0 28rpx env(safe-area-inset-bottom);
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 -8rpx 20rpx rgba(20, 20, 20, 0.05);
+}
+
+.nav-item {
+  flex: 1;
+  height: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28rpx;
+  color: #ff86a0;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.nav-item.active {
+  background: #ff86a0;
+  color: #fff;
+}

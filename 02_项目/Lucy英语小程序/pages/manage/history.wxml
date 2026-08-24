@@ -1,0 +1,66 @@
+<view class="manage-shell">
+  <view class="manage-header">
+    <view class="manage-top" style="height: 88rpx;">
+      <view class="manage-top-title">学习记录</view>
+    </view>
+  </view>
+
+  <view class="manage-body">
+    <view class="stat-row">
+      <view class="stat-box">
+        <view class="stat-value">{{todayDurationValue}}<text class="stat-unit"> 分钟</text></view>
+        <view class="stat-label">今日学习时长</view>
+      </view>
+      <view class="stat-box">
+        <view class="stat-value">{{todayInteractions}}</view>
+        <view class="stat-label">今日互动次数</view>
+      </view>
+    </view>
+
+    <view class="stat-row">
+      <view class="stat-box">
+        <view class="stat-value">{{todayKnowledgeCount}}</view>
+        <view class="stat-label">今日知识点数</view>
+      </view>
+      <view class="stat-box">
+        <view class="stat-value">{{monthlyKnowledgeCount}}</view>
+        <view class="stat-label">本月累计知识点</view>
+      </view>
+    </view>
+
+    <view class="heatmap-wrap">
+      <view class="heatmap-title-row">
+        <view class="heatmap-month">{{monthLabel}}</view>
+        <view class="heatmap-nav">
+          <view class="heatmap-nav-btn" bindtap="prevMonth">◀</view>
+          <view class="heatmap-nav-btn" bindtap="nextMonth">▶</view>
+        </view>
+      </view>
+      <view class="heatmap-grid">
+        <view wx:for="{{heatmap}}" wx:key="index" class="heat-cell {{item.cls}}">
+          {{item.day}}
+        </view>
+      </view>
+      <view class="heat-legend">
+        <text>少</text>
+        <span class="level-0"></span>
+        <span class="level-1"></span>
+        <span class="level-2"></span>
+        <span class="level-3"></span>
+        <span class="level-4"></span>
+        <text>多</text>
+      </view>
+    </view>
+
+    <view class="config-section">
+      <view class="config-section-title">今日知识点</view>
+      <block wx:for="{{todayKnowledge}}" wx:key="*this">
+        <view class="know-list-item">{{item}}</view>
+      </block>
+    </view>
+
+    <button class="btn-sm-add" bindtap="goKnowledgeList">查看所有已学知识点（按字母排序）</button>
+  </view>
+
+  <bottom-nav active="history" />
+</view>

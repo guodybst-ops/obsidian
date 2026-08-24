@@ -1,0 +1,22 @@
+# HZNU青年指南
+
+filters:
+  and:
+    - note["base"] == link("HZNU青年指南.base")
+properties:
+  file.name:
+    displayName: Name
+  Description:
+    displayName: Description
+  Tags:
+    displayName: Tags
+  日期:
+    displayName: 日期
+views:
+  - type: table
+    name: Table View
+    order:
+      - file.name
+      - Description
+      - Tags
+      - 日期

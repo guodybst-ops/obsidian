@@ -1,0 +1,10 @@
+student_id,student_name,unit_id,knowledge_point_id,mastery,confidence,evidence_count,correct_streak,wrong_streak,last_practiced_at,last_error_tags,status_color,next_action,teacher_note
+SAMPLE_A,模拟学生A,PEP6_U1,kp_pep6_u1_by_bus,0.60,0.20,0,0,0,,[],yellow,collect_evidence,初始状态为中性估计，需要通过 Unit 1 作业收集证据
+SAMPLE_A,模拟学生A,PEP6_U1,kp_pep6_u1_on_foot,0.60,0.20,0,0,0,,[],yellow,collect_evidence,初始状态为中性估计，需要通过 Unit 1 作业收集证据
+SAMPLE_A,模拟学生A,PEP6_U1,kp_pep6_u1_usually,0.60,0.20,0,0,0,,[],yellow,collect_evidence,初始状态为中性估计，需要通过 Unit 1 作业收集证据
+SAMPLE_A,模拟学生A,PEP6_U1,kp_pep6_u1_often,0.60,0.20,0,0,0,,[],yellow,collect_evidence,初始状态为中性估计，需要通过 Unit 1 作业收集证据
+SAMPLE_A,模拟学生A,PEP6_U1,kp_pep6_u1_how_go_to_school,0.60,0.20,0,0,0,,[],yellow,collect_evidence,初始状态为中性估计，需要通过 Unit 1 作业收集证据
+SAMPLE_A,模拟学生A,PEP6_U1,kp_pep6_u1_i_go_by_bus,0.60,0.20,0,0,0,,[],yellow,collect_evidence,初始状态为中性估计，需要通过 Unit 1 作业收集证据
+SAMPLE_A,模拟学生A,PEP6_U1,kp_pep6_u1_i_usually_go_on_foot,0.60,0.20,0,0,0,,[],yellow,collect_evidence,初始状态为中性估计，需要通过 Unit 1 作业收集证据
+SAMPLE_A,模拟学生A,PEP6_U1,kp_pep6_u1_bus_stop,0.60,0.20,0,0,0,,[],yellow,collect_evidence,初始状态为中性估计，需要通过 Unit 1 作业收集证据
+SAMPLE_A,模拟学生A,PEP6_U1,kp_pep6_u1_reading_detail_bus_stop,0.60,0.20,0,0,0,,[],yellow,collect_evidence,初始状态为中性估计，需要通过 Unit 1 作业收集证据

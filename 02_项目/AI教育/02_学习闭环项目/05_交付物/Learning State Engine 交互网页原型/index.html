@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning State Engine 交互网页原型</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-inner">
+        <a class="brand" href="#overview" aria-label="Learning State Engine 首页">
+          <span class="brand-mark" aria-hidden="true">LSE</span>
+          <span>
+            <span class="eyebrow">架构交互校验页</span>
+            <strong>Learning State Engine</strong>
+          </span>
+        </a>
+
+        <div class="view-switch" aria-label="视图切换">
+          <button class="view-pill is-active" type="button" data-view="architecture">架构视图</button>
+          <button class="view-pill" type="button" data-view="student">学生视图</button>
+          <button class="view-pill" type="button" data-view="teacher">老师视图</button>
+          <button class="view-pill" type="button" data-view="data">数据视图</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="页面导航">
+        <section class="loop-card">
+          <p class="side-label">当前闭环</p>
+          <ol class="loop-list">
+            <li><a href="#knowledge" data-flow-link="knowledge">Knowledge</a></li>
+            <li><a href="#practice" data-flow-link="practice">Stimulus</a></li>
+            <li><a href="#practice" data-flow-link="practice">Action</a></li>
+            <li><a href="#feedback" data-flow-link="feedback">Feedback</a></li>
+            <li><a href="#update" data-flow-link="update">State Update</a></li>
+            <li><a href="#policy" data-flow-link="policy">Policy</a></li>
+            <li><a href="#policy" data-flow-link="policy">Next Practice</a></li>
+          </ol>
+        </section>
+
+        <nav class="side-nav">
+          <a class="is-active" href="#overview">顶部总览</a>
+          <a href="#knowledge">L1 知识输入与转化</a>
+          <a href="#practice">页面做题区</a>
+          <a href="#state">L2 学生知识状态</a>
+          <a href="#feedback">L4 错因分析与反馈</a>
+          <a href="#dashboard">错因与错点看板</a>
+          <a href="#graph">知识图谱</a>
+          <a href="#update">状态更新</a>
+          <a href="#policy">下一步练习</a>
+          <a href="#lesson">教案生成</a>
+          <a href="#report">报告预览</a>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <section class="panel overview-panel" id="overview">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">System Overview</p>
+              <h1>学习状态驱动的 AI 学习闭环验证台</h1>
+            </div>
+            <span class="status-badge">V0.2 校验稿</span>
+          </div>
+
+          <div class="overview-grid">
+            <article class="summary-card">
+              <span class="summary-kicker">页面定位</span>
+              <h2>不是正式产品，也不是展示页</h2>
+              <p>用于验证 Learning State Engine 的完整闭环：从知识输入、题目生成、学生作答，到错因分析、状态更新、下一步练习和报告输出。</p>
+            </article>
+
+            <article class="summary-card">
+              <span class="summary-kicker">当前阶段</span>
+              <h2>架构交互校验页</h2>
+              <p>先确认系统对象、页面顺序和闭环逻辑是否成立，再进入正式产品形态、视觉品牌和工程化开发。</p>
+            </article>
+          </div>
+
+          <div class="flow-map" aria-label="Learning State Engine 闭环">
+            <a href="#knowledge" data-flow-link="knowledge">Knowledge</a>
+            <span>-></span>
+            <a href="#practice" data-flow-link="practice">Stimulus</a>
+            <span>-></span>
+            <a href="#practice" data-flow-link="practice">Action</a>
+            <span>-></span>
+            <a href="#feedback" data-flow-link="feedback">Feedback</a>
+            <span>-></span>
+            <a href="#update" data-flow-link="update">State Update</a>
+            <span>-></span>
+            <a href="#policy" data-flow-link="policy">Policy</a>
+            <span>-></span>
+            <a href="#policy" data-flow-link="policy">Next Practice</a>
+          </div>
+        </section>
+
+        <section class="panel module-panel" id="knowledge">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">L1 Knowledge Layer</p>
+              <h2>AI 对话式知识输入与转化区</h2>
+            </div>
+            <span class="layer-tag">输入材料不限类型</span>
+          </div>
+
+          <div class="two-column">
+            <article class="chat-box">
+              <div class="chat-message ai">
+                <strong>AI</strong>
+                <p>把 Word、PDF、图片、试卷、错题照片或文字材料放进来，我会先识别结构，再提取知识点。</p>
+              </div>
+              <label class="input-label" for="materialInput">输入教学材料或需求</label>
+              <textarea id="materialInput" rows="7">请根据 PEP 六年级 Unit 1 的交通方式和频率副词，提取知识点并生成练习。</textarea>
+              <div class="drop-zone" aria-label="文件拖入区">
+                <span>+</span>
+                <p>拖入 Word / PDF / 图片 / 文本片段</p>
+              </div>
+              <div class="button-row">
+                <button class="primary-button" type="button" id="extractButton">提取知识点</button>
+                <button class="ghost-button" type="button" id="makePracticeButton">生成练习</button>
+              </div>
+            </article>
+
+            <article class="result-box" id="knowledgeResult">
+              <div class="result-head">
+                <h3>提取出的知识点</h3>
+                <span>AI 草稿</span>
+              </div>
+              <div class="knowledge-list">
+                <label class="knowledge-item"><input type="checkbox" checked /> <span>频率副词 often / usually</span><em>词汇</em></label>
+                <label class="knowledge-item"><input type="checkbox" checked /> <span>交通方式 by bus / by subway</span><em>短语</em></label>
+                <label class="knowledge-item"><input type="checkbox" checked /> <span>How do you go to school?</span><em>句型</em></label>
+                <label class="knowledge-item"><input type="checkbox" /> <span>一般现在时第三人称单数</span><em>语法</em></label>
+              </div>
+              <div class="mini-actions">
+                <button type="button">合并知识点</button>
+                <button type="button">删除未选</button>
+                <button type="button">转教案</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel module-panel" id="practice">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">L3 Stimulus Layer + Student Action</p>
+              <h2>页面做题区</h2>
+            </div>
+            <div class="segmented" role="group" aria-label="练习模式">
+              <button class="is-active" type="button" data-mode="student">学生模式</button>
+              <button type="button" data-mode="teacher">老师预览</button>
+            </div>
+          </div>
+
+          <div class="practice-card">
+            <div class="exercise-title">
+              <div>
+                <h3>Unit 1 交通方式小练习</h3>
+                <p>每道题绑定知识点、题型和难度，提交后进入反馈与错因分析。</p>
+              </div>
+              <span>3 题</span>
+            </div>
+
+            <ol class="question-list">
+              <li class="question-item" data-answer="goes">
+                <div class="question-meta"><span>填空题</span><span>知识点：一般现在时</span><span>难度：中</span></div>
+                <p>He ____ to school by bus every day.</p>
+                <input type="text" placeholder="输入你的答案" />
+              </li>
+              <li class="question-item" data-answer="often">
+                <div class="question-meta"><span>选择题</span><span>知识点：频率副词</span><span>难度：低</span></div>
+                <p>I ____ go to school by subway. A. often B. bike C. red</p>
+                <input type="text" placeholder="输入选项或单词" />
+              </li>
+              <li class="question-item" data-answer="by subway">
+                <div class="question-meta"><span>翻译题</span><span>知识点：交通方式</span><span>难度：中</span></div>
+                <p>把“乘地铁”翻译成英文。</p>
+                <input type="text" placeholder="输入英文短语" />
+              </li>
+            </ol>
+
+            <div class="button-row align-right">
+              <button class="primary-button" type="button" id="submitPracticeButton">提交作答</button>
+            </div>
+            <div class="practice-result" id="practiceResult" hidden></div>
+          </div>
+        </section>
+
+        <section class="panel module-panel" id="state">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">L2 Student State Layer</p>
+              <h2>学生知识状态区</h2>
+            </div>
+            <div class="state-filters" role="group" aria-label="状态筛选">
+              <button class="is-active" type="button" data-state-filter="all">全部</button>
+              <button type="button" data-state-filter="red">红</button>
+              <button type="button" data-state-filter="yellow">黄</button>
+              <button type="button" data-state-filter="green">绿</button>
+            </div>
+          </div>
+
+          <div class="state-grid">
+            <article class="metric-card red">
+              <span>红色知识点</span>
+              <strong>2</strong>
+              <p>连续未通过，需要优先补救。</p>
+            </article>
+            <article class="metric-card yellow">
+              <span>黄色知识点</span>
+              <strong>5</strong>
+              <p>已学但证据不足，继续观察。</p>
+            </article>
+            <article class="metric-card green">
+              <span>绿色知识点</span>
+              <strong>8</strong>
+              <p>连续通过，暂时稳定掌握。</p>
+            </article>
+          </div>
+
+          <div class="table-wrap">
+            <table class="state-table">
+              <thead>
+                <tr><th>知识点</th><th>单元</th><th>考核次数</th><th>连续通过</th><th>连续未通过</th><th>状态</th></tr>
+              </thead>
+              <tbody>
+                <tr data-state="red"><td>often / usually</td><td>Unit 1</td><td>5</td><td>0</td><td>3</td><td><span class="status-dot red">红</span></td></tr>
+                <tr data-state="yellow"><td>by bus / by subway</td><td>Unit 1</td><td>2</td><td>1</td><td>1</td><td><span class="status-dot yellow">黄</span></td></tr>
+                <tr data-state="green"><td>How do you go to school?</td><td>Unit 1</td><td>4</td><td>3</td><td>0</td><td><span class="status-dot green">绿</span></td></tr>
+                <tr data-state="yellow"><td>第三人称单数</td><td>Unit 1</td><td>1</td><td>0</td><td>1</td><td><span class="status-dot yellow">黄</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <article class="chart-card">
+            <div class="chart-head">
+              <h3>每日学习量折线图</h3>
+              <div class="metric-tabs" role="group" aria-label="图表指标">
+                <button class="is-active" type="button" data-metric="题量">题量</button>
+                <button type="button" data-metric="知识点">知识点</button>
+                <button type="button" data-metric="转绿">转绿</button>
+                <button type="button" data-metric="转红">转红</button>
+                <button type="button" data-metric="学习时长">学习时长</button>
+              </div>
+            </div>
+            <div class="bar-chart" id="learningChart" aria-label="每日学习量图表">
+              <span style="height: 42%"></span>
+              <span style="height: 68%"></span>
+              <span style="height: 54%"></span>
+              <span style="height: 82%"></span>
+              <span style="height: 64%"></span>
+              <span style="height: 90%"></span>
+              <span style="height: 72%"></span>
+            </div>
+            <p class="chart-caption" id="chartCaption">当前指标：题量。点击某天可查看当天练习、错因和状态变化。</p>
+          </article>
+        </section>
+
+        <section class="panel module-panel" id="feedback">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">L4 Feedback Layer</p>
+              <h2>错因分析与反馈区</h2>
+            </div>
+            <span class="layer-tag">提交作答后自动生成</span>
+          </div>
+
+          <div class="feedback-grid">
+            <article class="feedback-card is-warning">
+              <span>题目 1</span>
+              <h3>错在第三人称单数</h3>
+              <p>学生写成 go，系统识别为一般现在时三单形式遗漏。</p>
+              <button type="button" data-jump="#state">查看知识状态</button>
+            </article>
+            <article class="feedback-card">
+              <span>题目 2</span>
+              <h3>频率副词混淆</h3>
+              <p>often 和 usually 的使用语境不稳定，需要更多例句区分。</p>
+              <button type="button" data-jump="#graph">查看图谱关系</button>
+            </article>
+            <article class="feedback-card">
+              <span>人工复核</span>
+              <h3>无需人工复核</h3>
+              <p>未检测到空题、无关文本或提示词攻击。</p>
+              <button type="button" data-jump="#dashboard">查看错因看板</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel module-panel" id="dashboard">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Error Data</p>
+              <h2>错因与错点数据看板</h2>
+            </div>
+            <div class="segmented compact" role="group" aria-label="时间范围">
+              <button class="is-active" type="button">本次练习</button>
+              <button type="button">最近 7 天</button>
+              <button type="button">全部历史</button>
+            </div>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="rank-card">
+              <h3>常见错因排行</h3>
+              <ol>
+                <li><span>频率副词混淆</span><strong>3 次</strong></li>
+                <li><span>第三人称单数遗漏</span><strong>2 次</strong></li>
+                <li><span>交通方式搭配错误</span><strong>1 次</strong></li>
+              </ol>
+            </article>
+            <article class="rank-card">
+              <h3>常错知识点排行</h3>
+              <ol>
+                <li><span>often / usually</span><strong>红</strong></li>
+                <li><span>第三人称单数</span><strong>黄</strong></li>
+                <li><span>by bus / by subway</span><strong>黄</strong></li>
+              </ol>
+            </article>
+          </div>
+
+          <div class="table-wrap">
+            <table class="matrix-table">
+              <thead><tr><th>知识点</th><th>高频错因</th><th>次数</th><th>当前状态</th><th>推荐补救方式</th></tr></thead>
+              <tbody>
+                <tr><td>often</td><td>频率副词混淆</td><td>3</td><td>红</td><td>同类对比例句 + 3 题再练</td></tr>
+                <tr><td>by bus</td><td>搭配错误</td><td>1</td><td>黄</td><td>交通方式短语归类</td></tr>
+                <tr><td>goes</td><td>三单遗漏</td><td>2</td><td>黄</td><td>主语识别 + 动词变化练习</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel module-panel" id="graph">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Knowledge Graph</p>
+              <h2>知识图谱区</h2>
+            </div>
+            <div class="segmented compact" role="group" aria-label="图谱筛选">
+              <button class="is-active" type="button">全部关系</button>
+              <button type="button">只看易混淆</button>
+              <button type="button">只看红色相关</button>
+            </div>
+          </div>
+
+          <div class="graph-box">
+            <svg class="graph-lines" viewBox="0 0 640 320" aria-hidden="true">
+              <path d="M130 150 C230 70 330 70 430 140" />
+              <path d="M130 150 C240 230 370 235 510 190" />
+              <path d="M430 140 C465 150 490 165 510 190" />
+              <path d="M250 255 C280 190 330 160 430 140" />
+            </svg>
+            <button class="graph-node red" type="button" style="left: 10%; top: 38%">often</button>
+            <button class="graph-node yellow" type="button" style="left: 36%; top: 74%">usually</button>
+            <button class="graph-node green" type="button" style="left: 62%; top: 34%">How do you go...</button>
+            <button class="graph-node yellow" type="button" style="left: 76%; top: 54%">by subway</button>
+          </div>
+        </section>
+
+        <section class="panel module-panel" id="update">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">State Update</p>
+              <h2>状态更新区</h2>
+            </div>
+            <button class="ghost-button" type="button" id="showUpdateButton">查看状态更新过程</button>
+          </div>
+
+          <div class="timeline" id="updateTimeline">
+            <article>
+              <span>更新前</span>
+              <h3>often：黄色</h3>
+              <p>已学过，但证据数量不足。</p>
+            </article>
+            <article>
+              <span>本次证据</span>
+              <h3>连续第 3 次未通过</h3>
+              <p>错因集中在频率副词混淆。</p>
+            </article>
+            <article>
+              <span>更新后</span>
+              <h3>often：红色</h3>
+              <p>触发补救策略，进入下一组针对性练习。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel module-panel" id="policy">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Learning Policy</p>
+              <h2>下一步练习生成区</h2>
+            </div>
+            <span class="layer-tag">根据红色知识点和高频错因生成</span>
+          </div>
+
+          <div class="policy-box">
+            <div>
+              <h3>生成规则</h3>
+              <p>优先补红色知识点，其次处理连续未通过、高频错因、强关联和易混淆知识点。</p>
+            </div>
+            <div class="policy-controls">
+              <label><input type="radio" name="count" value="3" checked /> 3 题</label>
+              <label><input type="radio" name="count" value="5" /> 5 题</label>
+              <label><input type="radio" name="count" value="10" /> 10 题</label>
+              <label><input type="checkbox" checked /> 只练红色知识点</label>
+              <label><input type="checkbox" /> 练易混淆知识点</label>
+            </div>
+            <button class="primary-button" type="button" id="generateNextButton">生成针对性练习</button>
+            <div class="next-output" id="nextOutput">待生成：下一组练习题、练习目标、对应知识点、对应错因和难度。</div>
+          </div>
+        </section>
+
+        <section class="panel module-panel" id="lesson">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Teacher Support</p>
+              <h2>教案生成区</h2>
+            </div>
+            <button class="ghost-button" type="button" id="makeLessonButton">生成教案草稿</button>
+          </div>
+
+          <div class="lesson-grid">
+            <article>
+              <h3>选择知识点</h3>
+              <label><input type="checkbox" checked /> often / usually</label>
+              <label><input type="checkbox" checked /> by bus / by subway</label>
+              <label><input type="checkbox" /> 第三人称单数</label>
+            </article>
+            <article class="lesson-output" id="lessonOutput">
+              <h3>教案草稿</h3>
+              <ul>
+                <li>教学目标：区分频率副词使用语境。</li>
+                <li>讲解顺序：例句观察 -> 对比归纳 -> 口头替换。</li>
+                <li>易错点：把交通方式短语误当作频率副词。</li>
+                <li>课后练习：3 道补弱题 + 1 道迁移题。</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel module-panel" id="report">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Reports</p>
+              <h2>报告预览区</h2>
+            </div>
+            <div class="report-tabs" role="group" aria-label="报告对象">
+              <button class="is-active" type="button" data-report="student">学生报告</button>
+              <button type="button" data-report="parent">家长报告</button>
+              <button type="button" data-report="teacher">老师报告</button>
+            </div>
+          </div>
+
+          <article class="report-card" id="reportCard">
+            <h3>学生报告</h3>
+            <p>你已经掌握了问路句型，但 often / usually 还不稳定。下一步先练 3 道频率副词对比题，再做 1 道交通方式迁移题。</p>
+            <div class="report-links">
+              <button type="button" data-jump="#state">查看红黄绿状态</button>
+              <button type="button" data-jump="#policy">查看下一步练习</button>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+event_id,student_id,assignment_id,question_id,knowledge_point_ids,stimulus_type,difficulty_band,is_correct,error_tags,mastery_delta,confidence_delta,evidence_strength,needs_human_review,created_at,notes
+EVT_SAMPLE_001,SAMPLE_A,PEP6_unit1_20260706_A7K2,Q1,kp_pep6_u1_by_bus,multiple_choice,basic,true,[],0.08,0.10,medium,false,2026-07-06T18:00:00+08:00,基础识别题答对，轻微提升 mastery
+EVT_SAMPLE_002,SAMPLE_A,PEP6_unit1_20260706_A7K2,Q4,kp_pep6_u1_often,fill_blank,basic,false,[adverb_confusion],-0.12,0.12,medium,false,2026-07-06T18:00:00+08:00,把 often 写成 usually，标记频率副词混淆
+EVT_SAMPLE_003,SAMPLE_A,PEP6_unit1_20260706_A7K2,Q8,kp_pep6_u1_reading_detail_bus_stop,reading_multiple_choice,basic,true,[off_task_or_prompt_injection],0.04,0.05,low,true,2026-07-06T18:00:00+08:00,选项正确但混入提示词攻击，学生端反馈不泄露答案 key，老师端复核

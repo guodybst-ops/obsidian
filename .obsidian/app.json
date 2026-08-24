@@ -1,0 +1,13 @@
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "01_收件箱/内容",
+  "attachmentFolderPath": "99_系统与归档/03_附件",
+  "userIgnoreFilters": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "机密文件（禁止读取及编辑！）/",
+    "99_系统与归档/04_历史归档/"
+  ]
+}

@@ -1,0 +1,234 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #202020 0%, #2a2a2a 100%);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88rpx;
+  padding-top: env(safe-area-inset-top);
+}
+
+.top-bar-title {
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 900;
+  letter-spacing: 2rpx;
+}
+
+/* ---- 登录表单 ---- */
+
+.login-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx 40rpx calc(120rpx + env(safe-area-inset-bottom));
+}
+
+.login-card {
+  width: 100%;
+  max-width: 600rpx;
+  padding: 50rpx 40rpx 44rpx;
+  border-radius: 32rpx;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.login-title {
+  text-align: center;
+  color: #111;
+  font-size: 38rpx;
+  font-weight: 900;
+}
+
+.login-subtitle {
+  margin-top: 10rpx;
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.role-switch {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 36rpx;
+}
+
+.role-option {
+  flex: 1;
+  padding: 24rpx 14rpx;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+  border: 3rpx solid #eee;
+  background: #fafafa;
+  transition: all 0.18s ease;
+}
+
+.role-option.active {
+  border-color: #ff86a0;
+  background: #fff0f5;
+}
+
+.role-icon {
+  font-size: 44rpx;
+}
+
+.role-name {
+  color: #555;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.role-option.active .role-name {
+  color: #ff86a0;
+}
+
+.login-form {
+  margin-top: 34rpx;
+}
+
+.login-input {
+  width: 100%;
+  height: 80rpx;
+  margin-bottom: 18rpx;
+  padding: 0 24rpx;
+  border-radius: 16rpx;
+  background: #f7eef0;
+  color: #222;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+.login-input::placeholder {
+  color: #b6b6b6;
+}
+
+.login-button {
+  width: 100%;
+  height: 80rpx;
+  margin-top: 10rpx;
+  border-radius: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff86a0;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 900;
+}
+
+/* ---- 用户信息页 ---- */
+
+.profile-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx 40rpx calc(120rpx + env(safe-area-inset-bottom));
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 600rpx;
+  padding: 60rpx 40rpx 44rpx;
+  border-radius: 32rpx;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-avatar-wrap {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+  background: linear-gradient(135deg, #ff86a0 0%, #ffb6c1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(255, 134, 160, 0.35);
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-avatar-placeholder {
+  font-size: 72rpx;
+  line-height: 1;
+}
+
+.profile-name {
+  color: #111;
+  font-size: 36rpx;
+  font-weight: 900;
+  margin-bottom: 6rpx;
+}
+
+.profile-account {
+  color: #999;
+  font-size: 24rpx;
+  margin-bottom: 14rpx;
+}
+
+.profile-role-tag {
+  padding: 8rpx 28rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  font-weight: 700;
+  background: #fff0f5;
+  color: #ff86a0;
+  margin-bottom: 40rpx;
+}
+
+.profile-menu {
+  width: 100%;
+  border-top: 1rpx solid #f0f0f0;
+  padding-top: 20rpx;
+}
+
+.profile-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 26rpx 12rpx;
+  border-radius: 16rpx;
+  transition: background 0.15s;
+}
+
+.profile-menu-item:active {
+  background: #f8f8f8;
+}
+
+.menu-icon {
+  font-size: 36rpx;
+  margin-right: 20rpx;
+}
+
+.menu-label {
+  flex: 1;
+  color: #222;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.menu-arrow {
+  color: #ccc;
+  font-size: 36rpx;
+  font-weight: 300;
+}
+
+.profile-menu-logout .menu-label {
+  color: #e06060;
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-29T01:31:16.540Z",
+  "activeChatTabId": "chat-1",
+  "nextChatTabIndex": 2,
+  "claudeHud": {},
+  "chatTabs": [
+    {
+      "id": "chat-1",
+      "title": "对话 1",
+      "claudeSessionId": "",
+      "activeRequestId": "",
+      "status": "idle",
+      "isStreaming": false,
+      "claudeHud": {},
+      "createdAt": 1785288676540,
+      "updatedAt": 1785288676540,
+      "messages": [
+        {
+          "id": "welcome",
+          "type": "welcome"
+        }
+      ]
+    }
+  ]
+}

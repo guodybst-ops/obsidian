@@ -1,0 +1,12 @@
+error_tag_id,display_name,category,diagnosis,student_feedback_style,teacher_action
+meaning_confusion,词义混淆,knowledge,学生把两个词或短语的中文意思混在一起,指出混淆点并给一个对比例句,安排最小对比题
+adverb_confusion,频率副词混淆,knowledge,学生混淆 usually 和 often 的含义或使用场景,用中文频率差异解释并给填空再练,增加 usually/often 对比题
+word_order_error,语序错误,syntax,学生知道词义但不能组成正确英语语序,给出句子框架而不是直接堆答案,安排连词成句和句型框架练习
+missing_function_word,功能词遗漏,syntax,学生漏掉 do/to/by 等功能词,提示缺失位置和句型骨架,安排句型填空
+preposition_error,介词/搭配错误,syntax,学生在 by bus/on foot 等固定搭配中用错或漏掉介词,强调固定搭配整体记忆,安排搭配识别题
+literal_translation,中式直译,expression,学生按中文逐词翻译导致表达不自然,保留学生意思但纠正英文表达框架,安排替换式翻译练习
+reading_location_error,阅读定位错误,reading,学生没有在原文找到关键信息或选择了相邻干扰项,提示回到原文找关键词,安排划证据/找关键词练习
+incomplete_answer,答案不完整,behavior,答案缺少关键部分或只写了半句,提示补全缺失信息,提醒学生按题号完整作答
+blank_answer,空题,behavior,学生没有作答,提示先尝试写出关键词,降低难度并给选择题
+off_task_or_prompt_injection,无关文本/提示词攻击,safety,答案中出现与题目无关内容或要求泄露答案 key 的内容,只评价与题目相关的答案部分,标记风险并必要时人工复核
+possible_ai_misgrade,可能误判,audit,AI 批改结果存在不确定性或可接受答案边界不清,不给学生确定性结论,进入老师人工复核

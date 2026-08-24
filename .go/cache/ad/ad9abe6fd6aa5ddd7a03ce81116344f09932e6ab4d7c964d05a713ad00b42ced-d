@@ -1,0 +1,8 @@
+./checkupgrade.go
+./http.go
+./openbrowser.go
+./p.go
+./port.go
+./response.go
+./token.go
+./uuid.go

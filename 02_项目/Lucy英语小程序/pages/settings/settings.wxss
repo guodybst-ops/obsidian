@@ -1,0 +1,136 @@
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #202020 0%, #2a2a2a 100%);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88rpx;
+  padding: 0 28rpx;
+  padding-top: env(safe-area-inset-top);
+}
+
+.top-back {
+  color: #ff86a0;
+  font-size: 28rpx;
+  font-weight: 600;
+  min-width: 120rpx;
+}
+
+.top-bar-title {
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 900;
+}
+
+.top-save {
+  color: #ff86a0;
+  font-size: 28rpx;
+  font-weight: 700;
+  min-width: 120rpx;
+  text-align: right;
+}
+
+.settings-content {
+  flex: 1;
+  padding: 30rpx 36rpx calc(40rpx + env(safe-area-inset-bottom));
+}
+
+.settings-section {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 28rpx 28rpx;
+  margin-bottom: 24rpx;
+}
+
+.settings-label {
+  color: #888;
+  font-size: 24rpx;
+  margin-bottom: 12rpx;
+}
+
+.settings-value-readonly {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 600;
+  padding: 8rpx 0;
+}
+
+.settings-hint {
+  color: #bbb;
+  font-size: 22rpx;
+  margin-top: 6rpx;
+}
+
+.settings-input {
+  width: 100%;
+  height: 76rpx;
+  padding: 0 20rpx;
+  border-radius: 12rpx;
+  background: #f7eef0;
+  color: #222;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+.settings-input::placeholder {
+  color: #b6b6b6;
+}
+
+/* 头像 */
+.avatar-preview-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rpx;
+}
+
+.avatar-preview {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 70rpx;
+  background: #f0f0f0;
+}
+
+.avatar-preview-placeholder {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 70rpx;
+  background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56rpx;
+}
+
+.avatar-edit-tip {
+  color: #ff86a0;
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+
+/* 密码 */
+.settings-password-section {
+  margin-top: 30rpx;
+}
+
+.settings-subtitle {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+  padding-bottom: 14rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.settings-field {
+  margin-bottom: 20rpx;
+}
+
+.settings-field:last-child {
+  margin-bottom: 0;
+}

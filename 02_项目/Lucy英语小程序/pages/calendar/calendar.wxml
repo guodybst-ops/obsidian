@@ -1,0 +1,75 @@
+<view class="page-shell calendar-page">
+  <view class="top-bar" style="padding-top: {{navMetrics.top}}px; height: {{navMetrics.height}}px;">
+    <view class="top-bar-title">Lucy的雷霆英语王国</view>
+  </view>
+
+  <view class="today-card">
+    <view class="today-stat">
+      <view><text class="number">{{todayDurationValue}}</text><text class="unit">{{todayDurationUnit}}</text></view>
+      <view class="label">今日已学时长</view>
+    </view>
+    <view class="divider"></view>
+    <view class="today-stat">
+      <view><text class="number">{{todayKnowledgeCount}}</text><text class="unit">个</text></view>
+      <view class="label">今日已学知识点</view>
+    </view>
+  </view>
+
+  <view class="month-card">
+    <view class="side-label">
+      <text>月</text>
+      <text>度</text>
+    </view>
+    <view class="heatmap-area">
+      <view class="month-switch">
+        <text class="month-label" bindtap="openMonthPicker">{{monthLabel}} ▾</text>
+      </view>
+      <view class="heatmap-grid">
+        <view
+          wx:for="{{heatmap}}"
+          wx:key="day"
+          class="heat-cell {{item.className}}"
+        ></view>
+      </view>
+    </view>
+    <view class="month-stats">
+      <view class="metric"><text class="metric-number">{{monthlyDurationValue}}</text><text>{{monthlyDurationUnit}}</text></view>
+      <view class="metric-label">累计已学时长</view>
+      <view class="metric"><text class="metric-number">{{studyDays}}</text><text>天</text></view>
+      <view class="metric-label">累计已学天数</view>
+      <view class="metric"><text class="metric-number">{{monthlyKnowledgeCount}}</text><text>个</text></view>
+      <view class="metric-label">累计已学知识点</view>
+    </view>
+  </view>
+
+  <view class="today-list">
+    <view class="section-title">今日知识点</view>
+    <view wx:if="{{todayKnowledge.length}}" class="chips">
+      <text wx:for="{{todayKnowledge}}" wx:key="*this" class="chip">{{item}}</text>
+    </view>
+    <view wx:else class="empty-note">今天还没有展开知识点</view>
+  </view>
+
+  <view class="reserved-area"></view>
+
+  <view wx:if="{{showMonthPicker}}" class="picker-mask" catchtap="closeMonthPicker">
+    <view class="picker-panel" catchtap="noop">
+      <view class="picker-header">
+        <text class="picker-year-btn" bindtap="pickerPrevYear">〈</text>
+        <text class="picker-year">{{pickerYear}}年</text>
+        <text class="picker-year-btn" bindtap="pickerNextYear">〉</text>
+      </view>
+      <view class="picker-grid">
+        <view
+          wx:for="{{months}}"
+          wx:key="*this"
+          class="picker-month {{(pickerYear === todayYear && item === todayMonth) ? 'current' : ''}} {{(pickerYear === selectedYear && item === selectedMonth) ? 'selected' : ''}}"
+          data-month="{{item}}"
+          bindtap="switchToMonth"
+        >{{item}}月</view>
+      </view>
+    </view>
+  </view>
+
+  <bottom-nav active="calendar" />
+</view>

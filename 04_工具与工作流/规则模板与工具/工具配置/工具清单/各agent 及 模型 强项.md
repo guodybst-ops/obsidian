@@ -1,0 +1,4 @@
+- cc+ claude 模型（opus 4.6） 写作
+- codex 执行、解决问题 日常办公
+- 编程：cc+codex
+- 入门推荐codex

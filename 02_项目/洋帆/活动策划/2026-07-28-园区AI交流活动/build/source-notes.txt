@@ -1,0 +1,12 @@
+Sources used for the deck
+
+1. 金尘马，《一文讲清楚，普通人和中小企业如何搭建AI知识库》；X status 2074515412272996467；访问日期：2026-07-28。
+   Supports: AI knowledge base enables work based on an organisation's existing materials; start with a minimal structure and low-risk task.
+
+2. Miles.Ma，《不做中转，不卖课，如何用 AI 月入 10万》；X status 2054024665652396142；访问日期：2026-07-28。
+   Supports: enterprise knowledge-base projects are framed around concrete business problems rather than generic tool demonstrations. Self-reported commercial figures are not used.
+
+3. hugohe3/ppt-master GitHub repository；访问日期：2026-07-28。
+   Used as workflow reference: source materials → structured narrative → native PPTX output → quality review.
+
+4. User-provided context in this conversation and local vault documents: event is intended for a park enterprise-service setting; no dates, venue, budget, sponsor, guest list, or confirmed pilot enterprises are available. These fields are marked 待确认 in the deck.

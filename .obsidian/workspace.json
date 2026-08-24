@@ -1,0 +1,251 @@
+{
+  "main": {
+    "id": "main-split",
+    "type": "split",
+    "children": [
+      {
+        "id": "825110e2ddb8a78f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4cc9493c78054b68",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "05_内容输出/内容/良渚新城企业稿件/2026-08-24-浙江华在-待核实编辑包-v2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-08-24-浙江华在-待核实编辑包-v2"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "left-split",
+    "type": "split",
+    "children": [
+      {
+        "id": "left-tabs",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "file-explorer-leaf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "search-leaf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "bookmarks-leaf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 327.5
+  },
+  "right": {
+    "id": "right-split",
+    "type": "split",
+    "children": [
+      {
+        "id": "right-tabs",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "outline-leaf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02_项目/洋帆/地址审批.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "84bfe416d6c7b719",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          },
+          {
+            "id": "47775ff4fd93cc4a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "04_工具与工作流/Skills/本机技能目录_2026-08-05/03_可直接调用技能速查.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "b43f5d564f3b30a8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "29eb8945cc087d28",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "701ea57cff0c9836",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 420,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "bases:新建数据库": false,
+      "nutstore-sync:Start sync": false,
+      "nutstore-sync:Stop sync": false,
+      "nutstore-sync:Open chatbox": false,
+      "realclaudian:Open Claudian": false
+    }
+  },
+  "active": "4cc9493c78054b68",
+  "lastOpenFiles": [
+    "05_内容输出/内容/良渚新城企业稿件/2026-08-24-浙江华在-产品介绍素材整理.md",
+    "05_内容输出/内容/良渚新城企业稿件/2026-08-24-浙江华在-报送沟通话术.md",
+    "05_内容输出/内容/良渚新城企业稿件/2026-08-24-浙江华在-配图建议.md",
+    "04_工具与工作流/网页工具/ChatGPT 全球价格对比.md",
+    "04_工具与工作流/网页工具",
+    "04_工具与工作流/网页工具/梯子.md",
+    "02_项目/洋帆/地址审批.md",
+    "02_项目/洋帆/党支部大会记录-20260625.md",
+    "02_项目/洋帆/党建.md",
+    "02_项目/洋帆/从一张商品图到一套视觉内容，良渚企业探索AI电商设计新路径.md",
+    "02_项目/洋帆/01_当前待办.md",
+    "04_工具与工作流/规则模板与工具/工具配置/工具清单/免费公众号下载——长风储物柜.md",
+    "04_工具与工作流/Skills/已安装的skill和插件/Khazix Skills.md",
+    "04_工具与工作流/01_收件箱/内容/播客/2026-08-24 商业早8点 - 8月24日 周一. 「亚朵」卖枕头收入快赶上开酒店 「金价」逼近每克千元水贝大单频现 「公积金」租房提取取消收入门槛.md",
+    "04_工具与工作流/01_收件箱/内容/播客/2026-08-24 十字路口Crossing - 22 岁的具身 CEO、5 轮融资、过亿美元、“不知天有多高”、“一年吃了十年的苦”｜对谈黄一：萝博派对创始人 CEO.md",
+    "04_工具与工作流/01_收件箱/内容/播客/2026-08-23 商业早8点 - 8月23日 周日. 「农夫山泉」创始人再炮轰电商平台 「特斯拉」中国车机首装豆包大模型 美加互征「50%关税」谈判破裂.md",
+    "04_工具与工作流/01_收件箱/内容/播客/2026-08-22 商业早8点 - 8月22日 周六. 「快手」利润下滑押注「可灵」 「海特高新」组织百人强闯抢走公章 「巴拿马运河」干旱限流或推高通胀.md",
+    "04_工具与工作流/01_收件箱/内容/播客/2026-08-21 知行小酒馆 - E248 从 QQ 空间到苹果设计大奖：一个非典型设计师的成长之路.md",
+    "04_工具与工作流/Skills/已安装的skill和插件/mattpocock-skills.md",
+    "04_工具与工作流/Skills/本机技能目录_2026-08-05/01_完整技能目录.md",
+    "04_工具与工作流/Skills/本机技能目录_2026-08-05/00_总览.md",
+    "04_工具与工作流/Skills/本机技能目录_2026-08-05/02_全部文件副本.md",
+    "04_工具与工作流/Skills/本机技能目录_2026-08-05/03_可直接调用技能速查.md",
+    "04_工具与工作流/Skills/已安装的skill和插件/feicaiclub-video spec builder.md",
+    "01_个人系统/个人待办-待分流.md",
+    "04_工具与工作流/01_收件箱/内容/播客/2026-08-21 商业早8点 - 8月21日 周五. 「恒大许家印」一审获判无期徒刑 「AI服务器」不坐船改坐飞机 「方便面」高价面撑起业绩回暖.md",
+    "01_个人系统/路飞切片——对现在的工作迷茫又找不到新的工作的时候.md",
+    "04_工具与工作流/Skills/neat-freak/evals/fixtures/eval-8-generated-memory/codex-memories/extensions/ad_hoc/notes",
+    "04_工具与工作流/Skills/neat-freak/evals/fixtures/eval-6-scope-boundary/workspace/current-app/src/server.ts",
+    "04_工具与工作流/Skills/neat-freak/evals/fixtures/eval-5-governance/workspace/pdf-tools/src/app.py",
+    "04_工具与工作流/Skills/neat-freak/evals/fixtures/eval-5-governance/workspace/Link_Shortener/src/server.js",
+    "04_工具与工作流/Skills/neat-freak/evals/fixtures/eval-4-cross-project/workspace/skills-hub/web/src",
+    "04_工具与工作流/Skills/neat-freak/evals/fixtures/eval-4-cross-project/workspace/auth-center/src/routes",
+    "04_工具与工作流/Skills/neat-freak/evals/fixtures/eval-4-cross-project/workspace/auth-center/migrations/004_device_codes.sql",
+    "04_工具与工作流/Skills/neat-freak/evals/fixtures/eval-2-memory-conflict/workspace/notesapp/src/auth.ts",
+    "04_工具与工作流/Skills/neat-freak/evals/fixtures/eval-3-cold-start/workspace/analytics_dashboard/src/lib",
+    "02_项目/副业_RAZ英语家教/Lucy/附件/Lucy的奖品库/image09.jpg",
+    "02_项目/副业_RAZ英语家教/Lucy/附件/Lucy的奖品库/image08.jpg",
+    "02_项目/副业_RAZ英语家教/Lucy/附件/Lucy的奖品库/image07.jpg",
+    "02_项目/副业_RAZ英语家教/Lucy/附件/Lucy的奖品库/image06.jpg",
+    "02_项目/副业_RAZ英语家教/Lucy/附件/Lucy的奖品库/image05.jpg",
+    "02_项目/副业_RAZ英语家教/Lucy/附件/Lucy的奖品库/image04.jpg",
+    "02_项目/副业_RAZ英语家教/Lucy/附件/Lucy的奖品库/image03.jpg",
+    "02_项目/副业_RAZ英语家教/Lucy/附件/Lucy的奖品库/image02.jpg",
+    "02_项目/副业_RAZ英语家教/Lucy/附件/Lucy的奖品库/image01.jpg",
+    "99_系统与归档/03_附件/蓝图/AI+Obsidian通用知识库结构蓝图.png"
+  ]
+}

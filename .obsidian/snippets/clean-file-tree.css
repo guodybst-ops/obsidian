@@ -1,0 +1,11 @@
+/* Keep AI configuration available to tools without cluttering the user file tree. */
+.nav-file-title[data-path="AGENTS.md"],
+.nav-file-title[data-path="CLAUDE.md"],
+.nav-folder-title[data-path="机密文件（禁止读取及编辑！）"] {
+  display: none;
+}
+
+.nav-file-title[data-path="00_首页.md"] {
+  color: var(--interactive-accent);
+  font-weight: 700;
+}

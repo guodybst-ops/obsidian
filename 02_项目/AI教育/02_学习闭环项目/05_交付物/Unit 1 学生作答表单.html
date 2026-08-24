@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit 1 英语作业</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f4;
+      --panel: #ffffff;
+      --text: #20231f;
+      --muted: #667064;
+      --line: #dfe5dc;
+      --accent: #1f7a5c;
+      --accent-strong: #135f47;
+      --warn: #a44f20;
+      --focus: #6aa1ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    main {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 44px;
+    }
+
+    header {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.2;
+      font-weight: 720;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .student-bar {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding: 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 640;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px 11px;
+      color: var(--text);
+      background: #fff;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--focus);
+      box-shadow: 0 0 0 3px rgba(106, 161, 255, 0.22);
+    }
+
+    .question-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .question {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .question-title {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-weight: 680;
+    }
+
+    .qid {
+      flex: 0 0 auto;
+      min-width: 42px;
+      color: var(--accent-strong);
+    }
+
+    .stem {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .options {
+      display: grid;
+      gap: 6px;
+      margin-left: 52px;
+      color: #30362f;
+    }
+
+    .answer-input {
+      margin-left: 52px;
+    }
+
+    .actions {
+      position: sticky;
+      bottom: 0;
+      margin-top: 18px;
+      padding: 12px 0 0;
+      background: linear-gradient(to bottom, rgba(246, 247, 244, 0), var(--bg) 28%);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    button {
+      border: 1px solid transparent;
+      border-radius: 6px;
+      padding: 10px 14px;
+      min-height: 42px;
+      background: var(--accent);
+      color: #fff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: var(--accent-strong);
+    }
+
+    button.secondary {
+      background: #fff;
+      color: var(--text);
+      border-color: var(--line);
+    }
+
+    button.secondary:hover {
+      background: #eef2ec;
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .status.warn {
+      color: var(--warn);
+      font-weight: 700;
+    }
+
+    .output {
+      display: none;
+      margin-top: 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      gap: 10px;
+    }
+
+    .output.visible {
+      display: grid;
+    }
+
+    .output textarea {
+      min-height: 220px;
+      resize: vertical;
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+    }
+
+    @media (max-width: 680px) {
+      main {
+        width: min(100% - 20px, 960px);
+        padding-top: 18px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .student-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .options,
+      .answer-input {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Unit 1 英语作业：How do you go to school?</h1>
+      <div class="meta">assignment_id：<strong>PEP6_unit1_20260706_A7K2</strong></div>
+    </header>
+
+    <section class="student-bar" aria-label="学生信息">
+      <label>
+        学生姓名
+        <input id="studentName" autocomplete="name" placeholder="请输入姓名" />
+      </label>
+      <label>
+        班级或备注
+        <input id="className" placeholder="可选" />
+      </label>
+    </section>
+
+    <section class="question-list" id="questionList" aria-label="题目列表"></section>
+
+    <section class="actions" aria-label="提交操作">
+      <button id="buildSubmission" type="button">生成提交内容</button>
+      <button id="copySubmission" class="secondary" type="button">复制提交内容</button>
+      <span id="status" class="status">完成后生成提交内容，发给老师批改。</span>
+    </section>
+
+    <section id="outputBox" class="output" aria-label="提交内容">
+      <label>
+        提交给老师的内容
+        <textarea id="submissionText" readonly></textarea>
+      </label>
+    </section>
+  </main>
+
+  <script>
+    const assignmentId = 'PEP6_unit1_20260706_A7K2';
+    const questions = [
+      {
+        id: 'Q1',
+        stem: '选择正确的英文表达：“乘公共汽车”。',
+        options: ['A. on foot', 'B. by bus', 'C. bus stop'],
+      },
+      {
+        id: 'Q2',
+        stem: '选择正确的英文表达：“步行”。',
+        options: ['A. on foot', 'B. school', 'C. usually'],
+      },
+      {
+        id: 'Q3',
+        stem: '补全句子：I ______ go to school by bus.（我通常乘公共汽车去上学。）',
+        options: [],
+      },
+      {
+        id: 'Q4',
+        stem: '补全句子：Mike ______ goes by bus.（Mike 经常乘公共汽车。）',
+        options: [],
+      },
+      {
+        id: 'Q5',
+        stem: '连词成句：do / How / go / you / to / school / ?',
+        options: [],
+      },
+      {
+        id: 'Q6',
+        stem: '把中文翻译成英文：我乘公共汽车去上学。',
+        options: [],
+      },
+      {
+        id: 'Q7',
+        stem: '把英文翻译成中文：I usually go on foot.',
+        options: [],
+      },
+      {
+        id: 'Q8',
+        stem: '阅读短文并选择正确答案：Amy usually goes to school on foot. Mike often goes by bus. They meet at the bus stop. 问题：Where do Amy and Mike meet?',
+        options: ['A. At the school', 'B. At the bus stop', 'C. On the bus'],
+      },
+    ];
+
+    const questionList = document.querySelector('#questionList');
+    const statusEl = document.querySelector('#status');
+    const outputBox = document.querySelector('#outputBox');
+    const submissionText = document.querySelector('#submissionText');
+
+    questionList.innerHTML = questions.map((question) => {
+      const options = question.options.length
+        ? `<div class="options">${question.options.map((option) => `<div>${option}</div>`).join('')}</div>`
+        : '';
+
+      return `
+        <article class="question">
+          <div class="question-title">
+            <div class="qid">${question.id}</div>
+            <div class="stem">${question.stem}</div>
+          </div>
+          ${options}
+          <label class="answer-input">
+            我的答案
+            <input data-answer-id="${question.id}" placeholder="填写 ${question.id} 的答案" />
+          </label>
+        </article>
+      `;
+    }).join('');
+
+    function collectAnswers() {
+      const answers = {};
+      document.querySelectorAll('[data-answer-id]').forEach((input) => {
+        answers[input.dataset.answerId] = input.value.trim();
+      });
+      return answers;
+    }
+
+    function buildPayload() {
+      const studentName = document.querySelector('#studentName').value.trim();
+      const className = document.querySelector('#className').value.trim();
+      const answers = collectAnswers();
+      const emptyCount = Object.values(answers).filter((value) => !value).length;
+      const submittedAt = new Date().toISOString();
+
+      return {
+        submission_id: `SUB_${assignmentId}_${Date.now()}`,
+        assignment_id: assignmentId,
+        student_name: studentName,
+        class_name: className,
+        submitted_at: submittedAt,
+        answers,
+        raw_answer_text: Object.entries(answers)
+          .map(([id, value]) => `${id}: ${value}`)
+          .join('\n'),
+        empty_count: emptyCount,
+      };
+    }
+
+    document.querySelector('#buildSubmission').addEventListener('click', () => {
+      const payload = buildPayload();
+      submissionText.value = JSON.stringify(payload, null, 2);
+      outputBox.classList.add('visible');
+      statusEl.textContent = payload.empty_count
+        ? `还有 ${payload.empty_count} 题未填写，可以先检查后再发给老师。`
+        : '提交内容已生成，可以发给老师批改。';
+      statusEl.className = payload.empty_count ? 'status warn' : 'status';
+    });
+
+    document.querySelector('#copySubmission').addEventListener('click', async () => {
+      if (!submissionText.value) {
+        document.querySelector('#buildSubmission').click();
+      }
+
+      submissionText.focus();
+      submissionText.select();
+
+      try {
+        await navigator.clipboard.writeText(submissionText.value);
+        statusEl.textContent = '已复制提交内容。';
+        statusEl.className = 'status';
+      } catch (error) {
+        document.execCommand('copy');
+        statusEl.textContent = '已选中提交内容，可手动复制。';
+        statusEl.className = 'status';
+      }
+    });
+  </script>
+</body>
+</html>

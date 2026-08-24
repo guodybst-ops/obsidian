@@ -1,0 +1,31 @@
+---
+tags: [概念, stub, 张小珺商业访谈录]
+created: 2026-07-20
+layer: extract
+status: stub
+provenance: external
+viewpoint_owner: external_author
+aliases: [Product Market Fit (PMF)]
+source_count: 1
+sources:
+  - show: "张小珺Jùn｜商业访谈录"
+    episode: "088"
+    speaker: "张小珺（小俊）"
+---
+# Product Market Fit (PMF)
+
+## 一句话
+过程中，如何与国家叙事来实现 PMF？
+
+## 原始资料语境
+- 过程中，如何与国家叙事来实现 PMF？
+
+## 直接可复用的定义
+- 过程中，如何与国家叙事来实现 PMF？
+
+## 边界
+- 本页只根据 99 原始资料整理，不引用 89 单集笔记。
+- 当前仍是单集节点；如果后续多集复现，再升级为跨集概念。
+
+## 来源
+- [[99原始资料/张小珺Jùn｜商业访谈录/088 - 85. 与总统竞选成员聊，总统候选人与美国叙事如何PMF？|原始资料]] — 按本集原始资料里的概念语境整理。

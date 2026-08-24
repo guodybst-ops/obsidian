@@ -1,0 +1,23 @@
+# WeChat DevTools local/private config
+project.private.config.json
+
+# Dependencies and build artifacts
+node_modules/
+miniprogram_npm/
+dist/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

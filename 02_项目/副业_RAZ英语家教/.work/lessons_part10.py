@@ -1,0 +1,272 @@
+"""RAZ Level L Lesson Plans Part 10: Lessons 19-20."""
+
+LESSONS = []
+
+# ===== 19. THE SPELLING BEE =====
+LESSONS.append({
+    "title_en": "The Spelling Bee",
+    "word_count": 539,
+    "topic": "拼字比赛——谦虚与共情",
+    "objectives": {
+        "knowledge": [
+            "掌握apology, compete, fail, glaring, smirk 等情感类词汇",
+            "理解be sure to, in front of, on stage 等短语",
+            "学习一般过去时叙事与情感形容词",
+        ],
+        "process": [
+            "通过图片激活拼字比赛背景",
+            "梳理Jasmine从骄傲到反省的过程",
+            "小组讨论'换位思考'主题，培养共情能力",
+        ],
+        "emotions": [
+            "学会谦虚与尊重他人",
+            "理解'失败是成功之母'的真正含义",
+        ],
+    },
+    "key_points": [
+        "情感类词汇 (apology, smirk, glare, fail, compete)",
+        "一般过去时 + 直接引语",
+        "in one's shoes 等习语",
+    ],
+    "difficult_points": [
+        "smirk / smile / laugh 的细微区别",
+        "fail to do sth. 与 fail at sth. 的用法",
+    ],
+    "methods": ["故事教学", "情感体验", "角色扮演"],
+    "preparation": ["拼字比赛图片", "故事插图", "生词卡"],
+    "process": [
+        {"name": "Lead-in（导入）", "duration": "5分钟",
+         "teacher": "提问Have you ever joined a competition? How did you feel?",
+         "students": "讨论经历。",
+         "purpose": "激活背景与情感。"},
+        {"name": "Pre-reading（读前）", "duration": "5分钟",
+         "teacher": "介绍人物（Jasmine, Finn, Mr. Russo）和拼字比赛规则；带读生词卡。",
+         "students": "听介绍，跟读生词。",
+         "purpose": "建立背景。"},
+        {"name": "While-reading（读中）", "duration": "18分钟",
+         "teacher": "1. 分段阅读；2. 完成Jasmine情感变化曲线图；3. 重点讲解smirk, glaring等词。",
+         "students": "分段阅读并完成情感曲线；小组讨论。",
+         "purpose": "训练阅读，落实词汇。"},
+        {"name": "Post-reading（读后）", "duration": "10分钟",
+         "teacher": "1. Discussion：What did Jasmine learn? 2. Role-play：Jasmine向Finn道歉。",
+         "students": "讨论；角色扮演。",
+         "purpose": "内化语言，培养共情能力。"},
+        {"name": "Summary & Homework（小结与作业）", "duration": "2分钟",
+         "teacher": "总结生词与时态，布置作业。",
+         "students": "记录作业。",
+         "purpose": "巩固。"},
+    ],
+    "blackboard": (
+        "The Spelling Bee\n"
+        "Win class bee (smirk)\n"
+        "Lose school bee (heart sank)\n"
+        "Apologize (understanding)\n"
+        "★ be sure to do = 一定要做…\n"
+        "★ in one's shoes = 站在某人立场"
+    ),
+    "homework": [
+        "必做：抄写12个重点词汇并造句。",
+        "选做：以Jasmine的口吻写一封道歉信给Finn。",
+        "拓展：选一个英文比赛片段（如《Spellbound》）观看，记录生词。",
+    ],
+    "vocabulary": [
+        {"word": "apology", "ipa": "/əˈpɑːlədʒi/", "pos": "n.", "meaning_zh": "道歉",
+         "meaning_en": "an expression of regret for a mistake or action that hurts someone"},
+        {"word": "compete", "ipa": "/kəmˈpiːt/", "pos": "v.", "meaning_zh": "竞争",
+         "meaning_en": "to do something for the purpose of winning"},
+        {"word": "fail", "ipa": "/feɪl/", "pos": "v.", "meaning_zh": "失败",
+         "meaning_en": "to not succeed"},
+        {"word": "glare", "ipa": "/ɡler/", "pos": "v.", "meaning_zh": "怒目而视",
+         "meaning_en": "to stare at someone in an angry way"},
+        {"word": "smirk", "ipa": "/smɜːrk/", "pos": "v.", "meaning_zh": "得意地笑",
+         "meaning_en": "to smile in a way that is not nice, showing you are pleased about something bad"},
+        {"word": "champion", "ipa": "/ˈtʃæmpiən/", "pos": "n.", "meaning_zh": "冠军",
+         "meaning_en": "a person or team that wins a competition"},
+        {"word": "principal", "ipa": "/ˈprɪnsəpəl/", "pos": "n.", "meaning_zh": "校长",
+         "meaning_en": "the person in charge of a school"},
+        {"word": "blush", "ipa": "/blʌʃ/", "pos": "v.", "meaning_zh": "脸红",
+         "meaning_en": "to become red in the face because you are embarrassed"},
+        {"word": "brag", "ipa": "/bræɡ/", "pos": "v.", "meaning_zh": "吹嘘",
+         "meaning_en": "to talk too proudly about something you have done"},
+        {"word": "broad", "ipa": "/brɔːd/", "pos": "adj.", "meaning_zh": "宽的；广的",
+         "meaning_en": "wide"},
+        {"word": "introduce", "ipa": "/ˌɪntrəˈduːs/", "pos": "v.", "meaning_zh": "介绍",
+         "meaning_en": "to tell someone another person's name when they meet for the first time"},
+        {"word": "applause", "ipa": "/əˈplɔːz/", "pos": "n.", "meaning_zh": "掌声",
+         "meaning_en": "the sound made by people clapping to show approval"},
+    ],
+    "phrases": [
+        {"phrase": "be sure to do", "meaning_zh": "一定要做…",
+         "usage": "强调必须性",
+         "example": "She was sure she was going to win the class spelling bee."},
+        {"phrase": "in front of", "meaning_zh": "在…前面",
+         "usage": "介词短语，强调当众",
+         "example": "I can't believe you're going onstage in front of the entire school."},
+        {"phrase": "on the word", "meaning_zh": "凭某个单词",
+         "usage": "强调凭…取胜",
+         "example": "I won my class bee on the word apology."},
+        {"phrase": "be out of", "meaning_zh": "出局",
+         "usage": "形容词短语",
+         "example": "That was it. She was out on her first word."},
+        {"phrase": "in one's shoes", "meaning_zh": "站在某人立场",
+         "usage": "习语，强调换位思考",
+         "example": "You never know how others feel until you're in their shoes."},
+        {"phrase": "win ... over", "meaning_zh": "赢得…支持",
+         "usage": "动词短语",
+         "example": "Mateo will be our captain, and he will lead us to victory!"},
+    ],
+    "grammar": [
+        {"point": "一般过去时 + 直接引语",
+         "explanation": "用直接引语标示原话，转述动词用过去式。",
+         "examples": [
+            "Mr. Russo said, \"Finn, your next word is apology.\"",
+            "She smirked at him.",
+        ]},
+        {"point": "形容词性物主代词 (my / your / his / her) + 情感名词",
+         "explanation": "物主代词+名词构成常用的情感/关系表达。",
+         "examples": [
+            "My favorite is Microraptor.",
+            "I won my class bee on the word apology.",
+        ]},
+        {"point": "Now 引导的对比句",
+         "explanation": "用now表'现在'与过去形成对比。",
+         "examples": [
+            "Now I know how he felt, she thought.",
+            "Yesterday she was sure she could win.",
+        ]},
+    ],
+})
+
+# ===== 20. THE WILD SWANS =====
+LESSONS.append({
+    "title_en": "The Wild Swans",
+    "word_count": 487,
+    "topic": "安徒生童话《野天鹅》——爱与牺牲",
+    "objectives": {
+        "knowledge": [
+            "掌握dawn, dusk, knit, nettles, task, wicked 等童话词汇",
+            "理解turn ... into, set out for, gather ... from 等短语",
+            "学习一般过去时叙事与被动语态",
+        ],
+        "process": [
+            "激活对《安徒生童话》的已有认知",
+            "梳理Eliza编织衬衫救兄长的经过",
+            "小组讨论爱与牺牲的主题",
+        ],
+        "emotions": [
+            "感受亲情的伟大",
+            "理解坚持与爱能创造奇迹",
+        ],
+    },
+    "key_points": [
+        "童话类词汇 (dawn, dusk, knit, nettles, wicked, spell)",
+        "一般过去时被动语态 (were turned into)",
+        "turn ... into ... 表状态转变",
+    ],
+    "difficult_points": [
+        "童话背景与奇幻元素",
+        "虚拟语气wish / 祈使句的细微区别",
+    ],
+    "methods": ["故事教学", "情感体验", "复述练习"],
+    "preparation": ["童话插图", "天鹅图片", "生词卡"],
+    "process": [
+        {"name": "Lead-in（导入）", "duration": "5分钟",
+         "teacher": "播放天鹅图片，提问What fairy tales do you know with animals?",
+         "students": "讨论已知童话。",
+         "purpose": "激活背景。"},
+        {"name": "Pre-reading（读前）", "duration": "5分钟",
+         "teacher": "介绍安徒生与《野天鹅》故事；带读生词卡。",
+         "students": "听介绍，跟读生词。",
+         "purpose": "建立背景。"},
+        {"name": "While-reading（读中）", "duration": "18分钟",
+         "teacher": "1. 分段阅读；2. 完成Eliza任务表（找荨麻/织衬衫/不能用语言）；3. 重点讲解knit, wicked等词。",
+         "students": "分段阅读并填写任务表；小组讨论。",
+         "purpose": "训练阅读，落实词汇。"},
+        {"name": "Post-reading（读后）", "duration": "10分钟",
+         "teacher": "1. Discussion：Would you keep silent to save your brothers? 2. 续写故事结局。",
+         "students": "讨论；续写故事。",
+         "purpose": "内化语言，培养价值观。"},
+        {"name": "Summary & Homework（小结与作业）", "duration": "2分钟",
+         "teacher": "总结生词与时态，布置作业。",
+         "students": "记录作业。",
+         "purpose": "巩固。"},
+    ],
+    "blackboard": (
+        "The Wild Swans\n"
+        "11 brothers -> swans (by wicked queen)\n"
+        "Eliza's task: knit 11 shirts from nettles\n"
+        "Rule: cannot speak\n"
+        "★ turn ... into ... = 把…变成…\n"
+        "★ set out for = 出发前往…"
+    ),
+    "homework": [
+        "必做：抄写12个重点词汇并造句。",
+        "选做：写一段话介绍你最喜欢的童话故事（英文）。",
+        "拓展：阅读其他安徒生童话片段（如《丑小鸭》），记录生词。",
+    ],
+    "vocabulary": [
+        {"word": "dawn", "ipa": "/dɔːn/", "pos": "n.", "meaning_zh": "黎明",
+         "meaning_en": "the time of day when the sun begins to rise"},
+        {"word": "dusk", "ipa": "/dʌsk/", "pos": "n.", "meaning_zh": "黄昏",
+         "meaning_en": "the time of day when the sun begins to set"},
+        {"word": "knit", "ipa": "/nɪt/", "pos": "v.", "meaning_zh": "编织",
+         "meaning_en": "to make fabric by looping yarn together using large needles"},
+        {"word": "nettle", "ipa": "/ˈnetəl/", "pos": "n.", "meaning_zh": "荨麻",
+         "meaning_en": "a wild plant with stinging hairs on its leaves"},
+        {"word": "task", "ipa": "/tæsk/", "pos": "n.", "meaning_zh": "任务",
+         "meaning_en": "a piece of work that needs to be done"},
+        {"word": "wicked", "ipa": "/ˈwɪkɪd/", "pos": "adj.", "meaning_zh": "邪恶的",
+         "meaning_en": "very mean or bad"},
+        {"word": "spell", "ipa": "/spel/", "pos": "n.", "meaning_zh": "咒语",
+         "meaning_en": "magic words that make something happen"},
+        {"word": "blister", "ipa": "/ˈblɪstər/", "pos": "n.", "meaning_zh": "水泡",
+         "meaning_en": "a painful swelling on the skin that contains clear liquid"},
+        {"word": "feather", "ipa": "/ˈfeðər/", "pos": "n.", "meaning_zh": "羽毛",
+         "meaning_en": "one of the soft light parts that cover a bird's body"},
+        {"word": "prince", "ipa": "/prɪns/", "pos": "n.", "meaning_zh": "王子",
+         "meaning_en": "a son of a king"},
+        {"word": "swan", "ipa": "/swɑːn/", "pos": "n.", "meaning_zh": "天鹅",
+         "meaning_en": "a large white water bird with a long neck"},
+        {"word": "vulture", "ipa": "/ˈvʌltʃər/", "pos": "n.", "meaning_zh": "秃鹫",
+         "meaning_en": "a large bird that eats dead animals"},
+    ],
+    "phrases": [
+        {"phrase": "turn ... into ...", "meaning_zh": "把…变成…",
+         "usage": "动词短语，强调状态改变",
+         "example": "She turned the princes into eleven wild swans."},
+        {"phrase": "set out for", "meaning_zh": "出发前往…",
+         "usage": "动词短语",
+         "example": "The princess set out for the forest to begin her work."},
+        {"phrase": "gather ... from ...", "meaning_zh": "从…采集…",
+         "usage": "动词短语",
+         "example": "She gathered many nettles from the forest."},
+        {"phrase": "be made of yarn", "meaning_zh": "由线编成",
+         "usage": "强调材料",
+         "example": "She made yarn from the nettles for the first shirt."},
+        {"phrase": "break the spell", "meaning_zh": "打破咒语",
+         "usage": "动词短语",
+         "example": "If the shirts are thrown over the eleven swans, the spell will be broken."},
+        {"phrase": "be released", "meaning_zh": "被解除",
+         "usage": "被动语态",
+         "example": "Your brothers can be released."},
+    ],
+    "grammar": [
+        {"point": "一般过去时被动语态",
+         "explanation": "结构：主语+was/were+过去分词(+by sb.)。描述童话中的状态变化。",
+         "examples": [
+            "She turned the princes into eleven wild swans.",
+            "The shirt was not quite done.",
+            "They were turned into eleven handsome princes.",
+         ]},
+        {"point": "must not do 表禁止",
+         "explanation": "must not + 动词原形，表强烈禁止做某事。",
+         "examples": [
+            "From the moment you start your task until it is finished, you must not speak.",
+         ]},
+        {"point": "if 引导的条件状语从句",
+         "explanation": "if从句用一般现在时，主句用will/may/can等表将来。",
+         "examples": [
+            "If the shirts are thrown over the eleven swans, the spell will be broken.",
+        ]},
+    ],
+})

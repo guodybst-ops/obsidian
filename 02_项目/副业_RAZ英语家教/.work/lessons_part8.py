@@ -1,0 +1,277 @@
+"""RAZ Level L Lesson Plans Part 8: Lessons 15-16."""
+
+LESSONS = []
+
+# ===== 15. SHOES AROUND THE WORLD =====
+LESSONS.append({
+    "title_en": "Shoes Around the World",
+    "word_count": 389,
+    "topic": "世界各地的传统鞋——文化与气候",
+    "objectives": {
+        "knowledge": [
+            "掌握traditional, occasion, kimono, sandal, slipper 等服饰与文化类词汇",
+            "理解be made of, slip on, tie around 等短语",
+            "学习一般现在时被动语态 (are made of) 与 used to do (过去常常)",
+        ],
+        "process": [
+            "通过图片激活世界各地鞋子的背景",
+            "借助地图定位各国传统鞋的产地",
+            "小组讨论不同鞋款与文化、气候的关系",
+        ],
+        "emotions": [
+            "感受世界各地文化的多样性",
+            "理解服饰与气候、生活方式的关系",
+        ],
+    },
+    "key_points": [
+        "服饰与文化词汇 (babouches, klompen, geta, kimono, sandal)",
+        "be made of / be worn with 被动结构",
+        "used to do 表过去习惯",
+    ],
+    "difficult_points": [
+        "不同国家传统鞋的文化背景",
+        "被动语态 + 介词短语 (with tabi socks)",
+    ],
+    "methods": ["图片环游", "文化渗透", "比较阅读"],
+    "preparation": ["各国传统鞋图片", "世界地图", "生词卡"],
+    "process": [
+        {"name": "Lead-in（导入）", "duration": "5分钟",
+         "teacher": "展示各国传统鞋图片，提问What kind of shoes do you like? Why?",
+         "students": "看图讨论。",
+         "purpose": "激活背景。"},
+        {"name": "Pre-reading（读前）", "duration": "5分钟",
+         "teacher": "在世界地图上标注各国位置；带读生词卡。",
+         "students": "看地图定位，跟读生词。",
+         "purpose": "建立地理与文化背景。"},
+        {"name": "While-reading（读中）", "duration": "15分钟",
+         "teacher": "1. 分段阅读；2. 完成各国鞋款对比表（材料/特点/用途）；3. 重点讲解be made of, used to do等。",
+         "students": "分段阅读并填写对比表；小组讨论。",
+         "purpose": "训练阅读，落实词汇与句型。"},
+        {"name": "Post-reading（读后）", "duration": "12分钟",
+         "teacher": "1. Discussion：Which shoes would you like to try? Why? 2. 设计一双你自己的'中国鞋'。",
+         "students": "讨论；设计汇报。",
+         "purpose": "内化语言，培养创造力。"},
+        {"name": "Summary & Homework（小结与作业）", "duration": "3分钟",
+         "teacher": "总结生词与被动结构，布置作业。",
+         "students": "记录作业。",
+         "purpose": "巩固。"},
+    ],
+    "blackboard": (
+        "Shoes Around the World\n"
+        "Babouches (Morocco) - camel hair, slippers\n"
+        "Klompen (Holland) - wooden, clip-clop\n"
+        "Geta (Japan) - tall, with kimono\n"
+        "Reindeer Boots (Lapland) - warm, snow\n"
+        "★ be made of + 材料 = 由…制成\n"
+        "★ used to do = 过去常常做…"
+    ),
+    "homework": [
+        "必做：抄写12个重点词汇并造句。",
+        "选做：写一段话介绍你最喜欢的一双鞋（英文）。",
+        "拓展：选择中国传统鞋（如绣花鞋、虎头鞋），用英文介绍。",
+    ],
+    "vocabulary": [
+        {"word": "traditional", "ipa": "/trəˈdɪʃənəl/", "pos": "adj.", "meaning_zh": "传统的",
+         "meaning_en": "following the customs or beliefs that have existed for a long time"},
+        {"word": "occasion", "ipa": "/əˈkeɪʒən/", "pos": "n.", "meaning_zh": "场合；时刻",
+         "meaning_en": "a special or important time or event"},
+        {"word": "kimono", "ipa": "/kəˈmoʊnoʊ/", "pos": "n.", "meaning_zh": "和服",
+         "meaning_en": "a traditional Japanese robe with wide sleeves, tied with a sash"},
+        {"word": "sandal", "ipa": "/ˈsændəl/", "pos": "n.", "meaning_zh": "凉鞋",
+         "meaning_en": "a light shoe that is open at the toes and heel"},
+        {"word": "slipper", "ipa": "/ˈslɪpər/", "pos": "n.", "meaning_zh": "拖鞋",
+         "meaning_en": "a soft, comfortable shoe worn indoors"},
+        {"word": "cactus", "ipa": "/ˈkæktəs/", "pos": "n.", "meaning_zh": "仙人掌",
+         "meaning_en": "a desert plant with sharp points instead of leaves"},
+        {"word": "snake", "ipa": "/sneɪk/", "pos": "n.", "meaning_zh": "蛇",
+         "meaning_en": "a long thin reptile with no legs"},
+        {"word": "sole", "ipa": "/soʊl/", "pos": "n.", "meaning_zh": "鞋底",
+         "meaning_en": "the bottom part of a shoe"},
+        {"word": "stirrup", "ipa": "/ˈstɜːrəp/", "pos": "n.", "meaning_zh": "马镫",
+         "meaning_en": "a metal loop hanging from a saddle for a rider's foot"},
+        {"word": "comfortable", "ipa": "/ˈkʌmfərtəbəl/", "pos": "adj.", "meaning_zh": "舒适的",
+         "meaning_en": "making you feel relaxed and not in pain"},
+        {"word": "dust", "ipa": "/dʌst/", "pos": "n.", "meaning_zh": "灰尘",
+         "meaning_en": "very small pieces of dirt that float in the air"},
+        {"word": "ceremony", "ipa": "/ˈserəmoʊni/", "pos": "n.", "meaning_zh": "典礼；仪式",
+         "meaning_en": "a formal event performed on important occasions"},
+    ],
+    "phrases": [
+        {"phrase": "be made of", "meaning_zh": "由…制成",
+         "usage": "强调材料构成",
+         "example": "Klompen are made of wood."},
+        {"phrase": "slip on / off", "meaning_zh": "穿/脱（鞋）",
+         "usage": "动词短语",
+         "example": "They are easy to slip on and off."},
+        {"phrase": "tie around", "meaning_zh": "系在…周围",
+         "usage": "动词短语",
+         "example": "The boots tie around your ankle to keep the snow out."},
+        {"phrase": "slip feet into", "meaning_zh": "把脚滑进…",
+         "usage": "动词短语",
+         "example": "Cowboys can easily slip their feet into saddle stirrups."},
+        {"phrase": "used to do", "meaning_zh": "过去常常做…",
+         "usage": "后接动词原形，表过去习惯",
+         "example": "Both men and women used to wear these sandals with their beautiful silk kimonos."},
+        {"phrase": "in cooler weather", "meaning_zh": "在较冷的天气",
+         "usage": "介词短语",
+         "example": "In cooler weather, geta are often worn with tabi socks."},
+    ],
+    "grammar": [
+        {"point": "一般现在时被动语态",
+         "explanation": "结构：主语+are+过去分词(+介词短语)。常用于描述物品的材料、用途或穿戴方式。",
+         "examples": [
+            "Babouches are made of camel hair.",
+            "Klompen are made of wood.",
+            "Cowboy boots are pointed at the toes.",
+         ]},
+        {"point": "used to do (过去常常做…)",
+         "explanation": "used to + 动词原形，表过去常常做某事（现在不再做）。",
+         "examples": [
+            "Both men and women used to wear these sandals with their beautiful silk kimonos.",
+            "People started wearing wooden geta over 2,000 years ago.",
+         ]},
+        {"point": "both ... and ... 连接两个并列项",
+         "explanation": "both A and B = A和B都；强调两个都包括。",
+         "examples": [
+            "Both men and women used to wear these sandals.",
+            "People wear different shoes for different reasons. Just like me!",
+        ]},
+    ],
+})
+
+# ===== 16. SIGN LANGUAGE AND HAND TALK =====
+LESSONS.append({
+    "title_en": "Sign Language and Hand Talk",
+    "word_count": 637,
+    "topic": "手语——历史、应用与名人",
+    "objectives": {
+        "knowledge": [
+            "掌握communicate, deaf, inspiration, alphabet 等交流类词汇",
+            "理解be made up of, point to, teach ... to 等短语",
+            "学习一般现在时被动语态 (is made by)",
+        ],
+        "process": [
+            "通过视频激活手语相关背景",
+            "借助时间轴梳理手语的历史",
+            "小组学习几个简单手语词，并介绍其用法",
+        ],
+        "emotions": [
+            "理解并尊重听障人士的交流方式",
+            "培养包容与多元文化意识",
+        ],
+    },
+    "key_points": [
+        "交流与文化类词汇 (communicate, deaf, inspiration, alphabet)",
+        "一般现在时被动语态 (is made by, is taught)",
+        "情态动词 can + 动词原形",
+    ],
+    "difficult_points": [
+        "手语文化背景知识",
+        "contain 包含的语义",
+    ],
+    "methods": ["图片视频", "文化体验", "任务型阅读"],
+    "preparation": ["手语视频", "字母手语图", "生词卡"],
+    "process": [
+        {"name": "Lead-in（导入）", "duration": "5分钟",
+         "teacher": "播放一段无声手语视频，提问How do deaf people communicate?",
+         "students": "看视频并讨论。",
+         "purpose": "激活背景。"},
+        {"name": "Pre-reading（读前）", "duration": "5分钟",
+         "teacher": "介绍手语发展史；带读生词卡。",
+         "students": "听介绍，跟读生词。",
+         "purpose": "建立背景。"},
+        {"name": "While-reading（读中）", "duration": "18分钟",
+         "teacher": "1. 分段阅读；2. 完成手语信息表（起源/种类/学习者/名人）；3. 重点讲解deaf, communicate等词。",
+         "students": "分段阅读并填写信息表；小组讨论。",
+         "purpose": "训练信息整合，落实词汇。"},
+        {"name": "Post-reading（读后）", "duration": "10分钟",
+         "teacher": "1. Try This：学几个手语词（hello, thank you, family）；2. Discussion：How can we help deaf friends?",
+         "students": "学手语并展示；讨论。",
+         "purpose": "内化语言，培养包容意识。"},
+        {"name": "Summary & Homework（小结与作业）", "duration": "2分钟",
+         "teacher": "总结生词与被动结构，布置作业。",
+         "students": "记录作业。",
+         "purpose": "巩固。"},
+    ],
+    "blackboard": (
+        "Sign Language and Hand Talk\n"
+        "American Sign Language (ASL) - since 1815\n"
+        "Whole word signs + Finger letters\n"
+        "Famous users: Gallaudet, Keller, Whitestone, Hoy\n"
+        "★ be made up of = 由…组成\n"
+        "★ teach ... to ... = 教…做…"
+    ),
+    "homework": [
+        "必做：抄写12个重点词汇并造句。",
+        "选做：学5个手语词并录一段30秒小视频向同学展示。",
+        "拓展：查阅Helen Keller生平，用英文写一段介绍。",
+    ],
+    "vocabulary": [
+        {"word": "communicate", "ipa": "/kəˈmjuːnɪkeɪt/", "pos": "v.", "meaning_zh": "交流；沟通",
+         "meaning_en": "to make thoughts or ideas known to other people"},
+        {"word": "deaf", "ipa": "/def/", "pos": "adj.", "meaning_zh": "聋的",
+         "meaning_en": "unable to hear anything or unable to hear well"},
+        {"word": "inspiration", "ipa": "/ˌɪnspəˈreɪʃən/", "pos": "n.", "meaning_zh": "鼓舞；灵感",
+         "meaning_en": "a good influence that makes someone want to do something"},
+        {"word": "sense", "ipa": "/sens/", "pos": "n.", "meaning_zh": "感官；感觉",
+         "meaning_en": "one of the five powers (sight, hearing, smell, taste, touch)"},
+        {"word": "sign", "ipa": "/saɪn/", "pos": "n.", "meaning_zh": "手势；标志",
+         "meaning_en": "a movement of the hands that means a word or idea"},
+        {"word": "alphabet", "ipa": "/ˈælfəbet/", "pos": "n.", "meaning_zh": "字母表",
+         "meaning_en": "the set of letters used in a language, in order"},
+        {"word": "whisper", "ipa": "/ˈwɪspər/", "pos": "v.", "meaning_zh": "耳语；私语",
+         "meaning_en": "to speak very quietly"},
+        {"word": "palm", "ipa": "/pɑːm/", "pos": "n.", "meaning_zh": "手掌",
+         "meaning_en": "the inside surface of the hand"},
+        {"word": "gorilla", "ipa": "/ɡəˈrɪlə/", "pos": "n.", "meaning_zh": "大猩猩",
+         "meaning_en": "a large ape that lives in African forests"},
+        {"word": "contest", "ipa": "/ˈkɑːntest/", "pos": "n.", "meaning_zh": "比赛；竞赛",
+         "meaning_en": "a competition"},
+        {"word": "league", "ipa": "/liːɡ/", "pos": "n.", "meaning_zh": "联盟；联合会",
+         "meaning_en": "a group of sports teams that play against each other"},
+        {"word": "trainer", "ipa": "/ˈtreɪnər/", "pos": "n.", "meaning_zh": "训练员；教练",
+         "meaning_en": "a person who teaches animals or people to do something"},
+    ],
+    "phrases": [
+        {"phrase": "be made up of", "meaning_zh": "由…组成",
+         "usage": "强调构成成分",
+         "example": "American Sign Language from French hand signs, Native American hand signs, and other hand signs."},
+        {"phrase": "point to", "meaning_zh": "指向",
+         "usage": "动词短语",
+         "example": "Then, the parent points to the ball."},
+        {"phrase": "teach ... to ...", "meaning_zh": "教…做…",
+         "usage": "动词短语，强调教学对象",
+         "example": "A dog owner can teach a dog to stay."},
+        {"phrase": "make up", "meaning_zh": "编造；组成",
+         "usage": "动词短语",
+         "example": "Deaf children make up ABC stories to practice signing letters."},
+        {"phrase": "sign language", "meaning_zh": "手语",
+         "usage": "名词短语",
+         "example": "Sign language first started in the United States in 1815."},
+        {"phrase": "tell ... from ...", "meaning_zh": "辨别",
+         "usage": "动词短语",
+         "example": "Koko can tell her trainer when she is hungry, thirsty, happy, or sad."},
+    ],
+    "grammar": [
+        {"point": "一般现在时被动语态",
+         "explanation": "结构：主语+is/are+过去分词(+by sb.)。描述事物的来源、构成或普遍规则。",
+         "examples": [
+            "American Sign Language from French hand signs, Native American hand signs.",
+            "Whole word signs are used to make sentences.",
+            "Sign language is taught to deaf people from when they are very young.",
+         ]},
+        {"point": "情态动词 can + 动词原形",
+         "explanation": "can表能力或可能性；否定形式cannot / can't。",
+         "examples": [
+            "Deaf children also learn to use their fingers to make letters.",
+            "They can even turn their heads upside down.",
+            "Koko can tell her trainer when she is hungry, thirsty, happy, or sad.",
+         ]},
+        {"point": "时间状语从句 (when / before / after)",
+         "explanation": "用when, before, after等连词连接两个动作发生的时间。",
+         "examples": [
+            "When the deaf child is playing with a ball, a parent uses two hands to make a sign for ball.",
+            "When a new letter of the alphabet is learned, a new part of the story is added.",
+        ]},
+    ],
+})

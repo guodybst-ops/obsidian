@@ -1,0 +1,12 @@
+<view class="bottom-nav">
+  <view
+    wx:for="{{tabs}}"
+    wx:key="key"
+    class="nav-item {{active === item.key ? 'active' : ''}}"
+    data-key="{{item.key}}"
+    data-url="{{item.url}}"
+    bindtap="handleTap"
+  >
+    {{item.text}}
+  </view>
+</view>

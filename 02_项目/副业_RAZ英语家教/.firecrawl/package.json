@@ -1,0 +1,20 @@
+﻿{
+  "name": "raz-firecrawl-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Firecrawl SDK demos for RAZ teaching project",
+  "scripts": {
+    "scrape": "node scrape-demo.mjs",
+    "crawl": "node crawl-demo.mjs",
+    "extract": "node extract-demo.mjs",
+    "map": "node map-demo.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@mendable/firecrawl-js": "^1.29.0",
+    "dotenv": "^16.4.5"
+  }
+}
