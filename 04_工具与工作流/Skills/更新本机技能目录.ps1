@@ -54,14 +54,31 @@ function Get-SkillMetadata([string]$path) {
     $lines = Get-Content -LiteralPath $path -TotalCount 100 -Encoding UTF8 -ErrorAction Stop
     $name = ''
     $description = ''
-    $inFrontmatter = $false
-    $frontmatterEnded = $false
-    if ($lines.Count -gt 0 -and $lines[0].Trim() -eq '---') { $inFrontmatter = $true }
-    foreach ($line in $lines) {
-        if ($inFrontmatter -and $line.Trim() -eq '---' -and $line -ne $lines[0]) { $frontmatterEnded = $true; break }
-        if ($inFrontmatter) {
-            if (-not $name -and $line -match '^name:\s*(.+)$') { $name = Get-Text $matches[1] }
-            if (-not $description -and $line -match '^description:\s*(.+)$') { $description = Get-Text $matches[1] }
+    $frontmatterLines = @()
+    if ($lines.Count -gt 0 -and $lines[0].Trim() -eq '---') {
+        for ($index = 1; $index -lt $lines.Count; $index++) {
+            if ($lines[$index].Trim() -eq '---') { break }
+            $frontmatterLines += $lines[$index]
+        }
+    }
+    for ($index = 0; $index -lt $frontmatterLines.Count; $index++) {
+        $line = $frontmatterLines[$index]
+        if (-not $name -and $line -match '^name:\s*(.+)$') { $name = Get-Text $matches[1] }
+        if (-not $description -and $line -match '^description:\s*(.*)$') {
+            $value = Get-Text $matches[1]
+            if ($value -match '^[>|][+-]?$') {
+                $descriptionParts = @()
+                for ($next = $index + 1; $next -lt $frontmatterLines.Count; $next++) {
+                    if ($frontmatterLines[$next] -match '^\s+(.+)$') {
+                        $descriptionParts += (Get-Text $matches[1])
+                    } else {
+                        break
+                    }
+                }
+                $description = ($descriptionParts -join ' ').Trim()
+            } else {
+                $description = $value
+            }
         }
     }
     if (-not $name) {
